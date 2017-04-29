@@ -1,0 +1,2169 @@
+﻿/*@import url(Csoa_reset.css);*/
+
+/*01-common & common tag*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+   width:100%;
+   height:100%; 
+   /*overflow:hidden;*/    
+}
+ body {
+     width:100%;
+     height:100%;
+     font-size:17px; 
+     background-color:#eaeaea;     
+     color:#303030;
+     font-family:Airal,"微軟正黑體",sans-serif;
+     font-weight:500;
+     overflow:hidden;   
+}
+
+ input[type="text"],input[type="password"],input[type="checkbox"],input[type="radio"] {
+    outline:none;
+    padding-left:0.15em;
+    padding-right:0.15em;   
+    height:1.35em;
+    line-height:1.35em;  
+    font-size:1em; 
+    border:1px solid #888;
+    vertical-align:middle;
+}
+input[type="checkbox"] {
+    border: none;
+}
+select {  
+    outline: none;
+    font-size: 1em;
+    border:1px solid #888;
+}
+h5 {
+    font-weight:500;
+}
+    input[type="text"]:hover, input[type="password"]:hover,select:hover,input[type="checkbox"]:hover,input[type="radio"]:hover,textarea:hover {       
+        border:1px solid #26a0da;
+    }
+    input[type="text"]:focus, input[type="password"]:focus,select:focus,input[type="checkbox"]:focus,input[type="radio"]:focus,textarea:focus {
+        border:1px solid #ffaeae ;
+    }
+input[disabled],text[disabled],select[disabled] {
+    background-color:#f3f3f3;
+}
+
+textarea {
+    margin-top:0.3em;
+    outline:none;
+    padding-left:0.15em;
+    padding-right:0.15em;    
+    font-size:1em; 
+    border:1px solid #888;    
+}
+
+.csoa_page_ul li pre {
+    display: inline;
+    font-weight:500;
+    font-family:Airal,"微軟正黑體",sans-serif;
+
+}
+
+/*jQuery datepicker reset*/
+ .ui-datepicker
+  { z-index:50 !important;
+    font-size:0.85em !important;
+ } 
+ /*end*/
+
+/*jQuery radio buttonset style reset*/
+div.csoa_radio_buttonset {
+    margin-left:1em;
+}
+.ui-botton-text-only,.ui-button-text { 
+    font-size:0.85em;          
+    color:#888;
+    font-family:Airal,"微軟正黑體",sans-serif;
+    font-weight:bold;   
+}
+div.csoa_radio_buttonset label  { 
+     height: 1.5em; 
+}
+div.csoa_radio_buttonset label:hover  { 
+     border:1px solid #26a0da;   
+} 
+div.csoa_radio_buttonset label span.ui-button-text {   
+    line-height: 1.0;
+}
+div.csoa_radio_buttonset label.ui-state-active span  {    
+   color:#333;
+} 
+/*end*/
+
+
+ /*edn 01-common & tag*/
+ 
+ /*02-header block*/
+#header {
+    position:absolute;
+    left:0.16%;
+    top:0.25%;
+    width:99.7%;
+    height:5.75%;
+    background-color:#303030;
+    color:#fff;
+    clear:both;
+    z-index:10;
+    margin:0 auto;
+    border-bottom:13px #dfdfdf solid;    
+}
+ #header  a {
+        color: #fff;
+        text-decoration:none;
+    }
+        #header a:hover {
+            color: #b4e3ff;
+        }
+
+    #header #header_name {
+        padding-top: 0.3em;
+        padding-top: 0.4%;
+        text-align: center;
+        width:38%;
+        height: 80%;
+        float: left;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+ //......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+        
+    #header #header_announse {
+        text-align:center;
+         width:27%;
+         height:80%;
+         float:left;
+         font-weight:bold;
+         font-size:1.2em;
+         padding-left:1%;
+         padding-right:1%;
+         color:yellow;
+         padding-top:0.5%;       
+         border-left:solid 1px yellow;
+         border-right:solid 1px yellow;
+       
+    }
+    #header #header_browsed {
+        width:13%;
+        height:80%;
+        padding-left:0.5em;
+        padding-top:0.7%;
+        float:left; 
+    }
+        #header #header_browsed ul {
+            list-style:none;
+        }
+        #header #header_browsed li  {
+            float:left;
+            display:block;
+            width:3em;
+            height:100%;
+        }
+        /* width&height  */
+        #header #header_browsed li a {
+            display:block;
+            width:20px;
+            height:20px;
+            background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=btnMap&dpi=1920);          
+    
+        }
+        #header #header_browsed li a:hover{
+            border:solid 0.08em yellow;
+        }
+            #header #header_browsed li a#browsed_id { background-position:-60px -80px; }
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+
+    #header #header_userinfo {                   
+         width:18%;
+         height:80%;
+         padding-left:0.6em;
+         float:left;
+         font-size:1em;
+         font-weight:bold;
+    }
+        #header #header_userinfo #userinfo_username {
+            text-align: right;
+            padding-left:1.6em;
+        }
+         #header #header_userinfo #userinfo_ userid{
+            padding-left:0.7em;
+        }
+   #header #header_userinfo #csoa_header_userinfo_logintime {
+          
+        }
+    #header_userinfo span#userinfo_logout a {
+        color:white;
+        margin-left:2em;
+    }
+     #header_userinfo span#userinfo_logout a:hover {
+        border-bottom:1px solid white;
+    }
+
+    #header_open {
+            position:absolute;
+            left:45%;
+            top:0.25%;           
+            background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=header_open&dpi=1920);
+            cursor:pointer;  
+        }
+          #header_close {
+            position:absolute;
+            left:48%;
+            top:100%;
+            background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=header_close&dpi=1920);
+            cursor:pointer;
+            z-index:15;
+        }
+/*end 02-header block*/
+
+/*03-siderbar block*/   
+#sidebar {
+    position:absolute;
+    /*left:0.15%;*/
+    left:0.25%;
+    top:6.0%;
+    width: 240px;
+    height: 91%;    
+    font-size:1em;   
+    background-color:#eaeaea;
+    border-right:13px #dfdfdf solid;
+    border-top:13px #dfdfdf solid;  
+    /*border-left:13px #dfdfdf solid;*/  
+    z-index:10;    
+}
+
+#csoa_dialog_login #csoa_logo {
+    background-image: url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=logo&dpi=1920);
+    width: 240px;
+    height: 120px;
+    margin:0 auto;
+}
+
+#sidebar #csoa_logo {
+    background-image: url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=logo&dpi=1920);
+    margin:0 auto;
+    width:240px;
+    height:120px;   
+}
+  
+    #sidebar h3 {
+        display:block;
+        /*background-color:#0e385f;*/
+        background-color:#3a5795;             
+        height:5%;
+        color:#fff;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+}
+
+    #sidebar ul#csoa_menu {
+        width:99%;
+        height:75.5%;
+        margin:0 auto;
+        background-color:#eaeaea;
+        margin-top:0.3%;
+        margin-bottom:0.2%;
+        overflow-y:auto;
+        overflow-x:hidden;
+        color:#333;   
+        list-style:none;   
+}
+     
+        #sidebar ul#csoa_menu ul  {
+            background-color:#eaeaea;
+            list-style:none;
+        }
+            #sidebar ul#csoa_menu a {
+                text-decoration:none;
+            }
+         
+        /* 目錄等級 之li 之span */
+        #sidebar ul#csoa_menu li span {
+             display:block;
+             float:left;
+             width:16px;
+             height:16px;
+             background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=icon_catalog&dpi=1920);
+             margin-left:0.28em;            
+             visibility:visible;           
+             margin-top:0.43em;           
+        }
+        #sidebar ul#csoa_menu li span[noright] {            
+             background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=icon_catalog&dpi=1920&disabled=true);                   
+        }
+            #sidebar ul#csoa_menu li ,#sidebar ul#csoa_menu li li {
+                display:block;
+                overflow:hidden;
+                clear:both;
+                border-bottom:1px #ddd solid;
+                color:#333;
+            }
+          
+                #sidebar ul#csoa_menu li li {
+                    background-color:#fafafa;
+                }
+                
+                #sidebar ul#csoa_menu li li a {
+                    line-height:1.8;
+                    font-size:0.9em;
+                    font-weight:500;                 
+                    margin-left:1.35em;
+                    color:#333;                 
+                    display:block;
+                    float:left;   
+                    overflow:hidden;                 
+                }
+
+                #sidebar ul#csoa_menu li a  {
+                    line-height:1.8;
+                    font-size:1em;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+                    display:block;
+                    float:left;                       
+                }               
+                #sidebar ul#csoa_menu>li>a:hover{
+                    color: blue;
+                    cursor:pointer;
+                    font-weight:bold;                    
+                }
+                #sidebar ul#csoa_menu>li:hover{
+                    background-color:white;
+                }
+                  
+        #sidebar_close {
+            position:absolute;
+            left:100%;
+            top:35%;
+            background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=sidebar_close&dpi=1920);
+            cursor:pointer;
+            z-index:15;
+        }
+
+         #sidebar_open {
+            position:absolute;
+            left:0.15%;
+            top:39%;
+            background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=sidebar_open&dpi=1920);
+            cursor:pointer;
+            z-index:10;
+        }
+#sidebar_open, #sidebar_close, #header_open, #header_close {
+    -moz-opacity: 0.3; /* Moz + FF舊版 */
+    opacity: 0.3;  /*IE9、IE10及chrome、ff、opera、safari較新版*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=30)"; /*IE8 only*/
+}  
+ /*end 03-siderbar block*/  
+   
+/*04-content 容器block (總容器#content及其他容器設定)*/
+#content {
+    width: 100%;
+    height: 100%; 
+    -moz-box-shadow: 1px 1px 0.3em #bbb,-1px -1px 0.3em #888;
+    -webkit-box-shadow: 1px 1px 0.3em #bbb,-1px -1px 0.3em #888;
+    box-shadow:1px 1px 0.3em #bbb,-1px -1px 0.3em #888;      
+    background-color:#f8f8f8; 
+    overflow:hidden;
+    padding:0.2em;
+        
+}
+
+/* server端CustomersPage.aspx 用之 #content 內各container大小設定*/
+/*server端CsutoersPage專用之form's Id*/
+    #content #form1 {
+        width:100%;
+        height:100%;     
+    }
+       
+#content .csoa_container {
+    width:99%;
+    margin:0 auto;
+    padding:0.2em;
+    overflow:auto;
+}
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+#content .csoa_pageContainer {
+    width:99%;
+    margin:0 auto;
+    /*padding:0.1em;*/ 
+    overflow:hidden;
+}
+#content .csoa_pageContainer_border { 
+    width:99%;       
+    border:1px solid #df0000;    
+    /*border:3px solid #eaeaea;*/ 
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+#content .csoa_realContainer { 
+    width:99%;       
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden;
+}
+#content .csoa_realContainer_border { 
+    width:99%;    
+    border:1px solid #bbb; 
+    margin:0 auto;
+    /*padding:0.1em;*/  
+    overflow:hidden;
+}
+#content .csoa_detailContainer { 
+    width:99%;       
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+#content .csoa_detailContainer_border { 
+    width:99%;    
+    border:1px solid #bbb; 
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+
+#content .csoa_placeContainer { 
+    width:99%;       
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+#content .csoa_placeContainer_border { 
+    width:99%;    
+    border:1px solid #bbb; 
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+#content .csoa_holderContainer { 
+    width:99%;       
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+#content .csoa_holderContainer_border { 
+    width:99%;    
+    border:1px solid #bbb; 
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+#content .csoa_box1Container { 
+    width:99%;       
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+#content .csoa_box2Container { 
+    width:99%;       
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+#content .csoa_box2Container_border { 
+    width:99%;    
+    border:1px solid #bbb; 
+    margin:0 auto;
+    /*padding:0.1em;*/   
+    overflow:hidden; 
+}
+
+
+    #content .csoa_tabHContainer_first {
+        height:99.5%;
+        float:left;
+        margin-right:0.5em;
+        
+    }
+    #content .csoa_tabHContainer {
+        height:99.5%;
+        float:left;
+        margin:0 auto;
+       
+    }
+
+       #content .csoa_tabHContainer_first_border {
+        height:98.5%;
+        float:left;
+        margin-right:0.5em;
+        border:1px solid #ccc;
+    }
+    #content .csoa_tabHContainer_border {
+        height:98.5%;
+        float:left;
+        border:1px solid #ccc;
+        margin:0 auto;
+    }
+
+     #content .csoa_tabWContainer_first {  
+           margin:0 auto;    
+           margin-bottom:0.5em;
+          
+    }
+    #content .csoa_tabWContainer {
+        margin:0 auto;         
+    }
+        #content .csoa_tabWContainer_first_border {  
+           margin:0 auto;    
+           margin-bottom:0.5em;
+            border:1px solid #ccc;
+    }
+    #content .csoa_tabWContainer_border {
+            margin:0 auto;
+             border:1px solid #ccc;    
+    }
+
+    #content .csoa_em01,#content.csoa_em01 {padding: 0.1em; }
+    #content .csoa_em02,#content.csoa_em02 {padding: 0.2em;}
+    #content .csoa_em03,#content.csoa_em03 {padding: 0.3em;}
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+    #content .csoa_em09,#content.csoa_em09 {padding: 0.9em;}
+    #content .csoa_em10,#content.csoa_em10 {padding: 1em;}
+    #content .csoa_em12,#content.csoa_em12 {padding: 1.2em;}
+    #content .csoa_em15,#content.csoa_em15 {padding: 1.5em;}
+    #content .csoa_em18,#content.csoa_em18 {padding: 1.8em;}
+    #content .csoa_em20,#content.csoa_em20 {padding: 2em;}
+    #content .csoa_em25,#content.csoa_em25 {padding: 2.5em;}
+    #content .csoa_em30,#content.csoa_em30 {padding: 3em;}
+
+    #content .csoa_pc01,#content.csoa_pc01 {padding: 0.1%; }
+    #content .csoa_pc02,#content.csoa_pc02 {padding: 0.2%;}
+    #content .csoa_pc03,#content.csoa_pc03 {padding: 0.3%;}
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+    #content .csoa_pc10,#content.csoa_pc10 {padding: 1%;}
+    #content .csoa_pc12,#content.csoa_pc12 {padding: 1.2%;}
+    #content .csoa_pc15,#content.csoa_pc15 {padding: 1.5%;}
+    #content .csoa_pc18,#content.csoa_pc18 {padding: 1.8%;}
+    #content .csoa_pc20,#content.csoa_pc20 {padding: 2%;}
+    #content .csoa_pc25,#content.csoa_pc25 {padding: 2.5%;}
+    #content .csoa_pc30,#content.csoa_pc30 {padding: 3%;}
+      #content .csoa_pc30,#content.csoa_pc50 {padding: 5%;}
+
+    #content .csoa_overflow_auto {
+        overflow:auto;
+    }
+
+
+/*content內container (psuedo margin-top)，避免設定margin-top會被父層元素吃掉*/
+#content .content_padding_h {
+    height:0.1em;
+}
+#content .csoa_floatLeft {
+    float:left;
+}
+    #content .csoa_floatRight {
+        float:right
+    }
+    #content .csoa_clear {
+        clear:both;
+    }
+    #content .csoa_overflowHidden {
+        overflow:hidden;
+    }
+#content .clear {
+    clear:both;
+}
+    #content .csoa_textareaH {
+        height:8em;
+    }
+/*end 04-content block (總容器#content及其他容器設定)*/
+
+
+/*===============畫面設定======畫面設定=========畫面設定========畫面設定====================*/
+/*05-一般client(非server端之CustomersPage.aspx)端之畫面設定*/
+.csoa_page_ul {
+    overflow: auto;
+}
+
+
+/*05-server端 上半部資料篩選欄位(#PanelSelection及#PanelDetail)之row div */
+/*一：row div (form=>row) */
+#content .csoa_row_div {           
+            height: 1.9em;
+            padding-top: 0.1em;            
+            overflow:hidden;
+            margin-bottom:0.1em; 
+            color:#333;               
+}
+.csoa_page_formset {
+    color:#333;
+    border:1px solid #bbb
+}
+
+/*一.1：field div(form=>row=>field)*/
+    /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div(內包含3個div =>csoa_filed_name_div、csoa_field_value_div、csoa_filed_gap_div)*/
+    #content .csoa_field_div,.csoa_page_formset .csoa_page_form .csoa_page_ul li  {
+            width:26em;
+            height:1.8em; 
+            border:1px solid #f0f0f0;
+            float:left;            
+            overflow:hidden;
+            margin:0 0.1em;        
+    }
+    .csoa_page_formset .csoa_page_form .csoa_page_ul li  {
+            margin-bottom:0.1em; 
+    }
+/*一.1.(1)：field name div(form=>row=>field=>欄位名稱div)*/
+        /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div 內之欄位name div*/
+        /*#content #PanelSelection .csoa_row_div .csoa_field_name_div,#content #PanelDetail .csoa_row_div .csoa_field_name_div {*/
+        #content .csoa_field_name_div,.csoa_page_formset .csoa_page_form .csoa_page_ul li h4 {
+                width:5em;
+                text-align:right;
+                float:left;  
+                line-height:1.6em;
+                padding-right:0.3em;                 
+        }
+         .csoa_page_formset .csoa_page_form .csoa_page_ul li h4 {             
+                line-height:1.6em;                          
+        }
+                 /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div 內之欄位name div 內包含<pre><span>我是欄名</span></pre> */
+                #content #PanelSelection .csoa_row_div .csoa_field_name_div pre {
+                }
+                /*實際欄位中文名稱span*/
+                 #content #PanelSelection .csoa_row_div .csoa_field_name_div span {
+                }
+
+/*一.1.(2)：field value div(form=>row=>field=>整個data div欄位)*/
+        /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div 內之欄位value div(其內包含2個=>欄位div.cosa_field_data及錯誤flag欄位span.csoa_filed_err)*/
+        #content #PanelSelection .csoa_row_div .csoa_field_value_div,#content #PanelDetail .csoa_row_div .csoa_field_value_div {
+                height:1.8em;             
+                float:left;
+                text-align:left;            
+        }
+            /*設定資料欄 class=.csoa_field_data之外框線*/
+            #content #PanelSelection .csoa_row_div .csoa_field_value_div .csoa_field_data, #content #PanelDetail .csoa_row_div .csoa_field_value_div .csoa_field_data {
+             
+            }
+            /*設定資料欄 class=.csoa_field_data :hover之外框線*/
+            #content #PanelSelection .csoa_row_div .csoa_field_value_div .csoa_field_data:hover, #content #PanelDetail .csoa_row_div .csoa_field_value_div .csoa_field_data:hover {
+              
+            }
+            /*設定資料欄 class=.csoa_field_data :focus之外框線*/
+            #content #PanelSelection .csoa_row_div .csoa_field_value_div .csoa_field_data:focus, #content #PanelDetail .csoa_row_div .csoa_field_value_div .csoa_field_data:focus {
+              
+            }
+              
+/*一.1.(2).a：field data ：input 、input日期、 select......(form=>row=>field=>整個data欄位=>資料) */
+            /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div 內之欄位value div 內之 input類輸入框欄位(class均為csoa_field_data)*/           
+            /*2014#/02/23=>重新定義所有預設的input欄位寬度*/
+            #content input[type=text],#content input[type=password]{                       
+                width:9em;
+            }
+            /*日期欄位   每個欄位均有serverDate, csoa_field_data, hasDatepicker三個class*/
+            /*2014#/02/23=>重新定義所有預設input(日期)欄位寬度*/
+            #content input[type=text].serverDate,#content input[type=text].csoa_date {
+                width:7em;
+            }
+            
+
+            /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div 內之欄位value div 內之 select類下拉欄位(class均為csoa_field_data)*/
+           
+                /*select 下之option tag*/
+                #content #PanelSelection .csoa_row_div .csoa_field_value_div select.csoa_field_data option {                         
+                }
+                #content #PanelSelection .csoa_row_div .csoa_field_value_div select.csoa_field_data option:hover {
+                    /*background-color:#eaeaea;*/
+                }
+                 /*select 下之option tag 被selected*/
+                #content #PanelSelection .csoa_row_div .csoa_field_value_div select.csoa_field_data option[selected] {
+                }
+            /*所有 input text類欄位(含serverDate欄位)，若為唯讀則有 readonly="readonly"屬性+ "readonly" class。但select類欄位則無此屬性(僅有單一個option，所以也不能選)*/
+            #content #PanelSelection .csoa_row_div .csoa_field_value_div input.csoa_field_data[readonly] {
+            }
+/*一.1.(2).b：錯誤flag是 span(form=>row=>field=>整個data欄位=>錯誤flag) */
+        /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div 內之欄位value div 內之錯誤flag欄位*/
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+/*一.1.(2).c：field與下一field的gap div  */
+        /*server端 上半部資料篩選欄位(#PanelSelection)之row div  下一個完整field div 內之欄位gape div (form=>row=>field=>整個data欄位=>與下一欄位的間隔)*/
+        #content #PanelSelection .csoa_row_div .csoa_field_gap_div,#content #PanelDetail .csoa_row_div .csoa_field_gap_div {      
+                width:0.1em;
+                height:2em;
+                float:left;              
+        }
+
+.csoa_page_formset form ul li.csoa_newLine {
+    clear:both;
+}
+
+/*end 05-server端 上半部資料篩選欄位(#PanelSelection及#PanelDetail)之row div */
+/*end============畫面設定======畫面設定=========畫面設定========畫面設定====================*/
+
+
+/*===============table/gridview設定========table/gridview設定===========table/gridview設定===========*/
+/*06-server端下半部gridview(#PanelGrid)之設定*/
+.gridview_border {
+            width:99%;
+            height:98%;
+            overflow:auto;             
+            border:1px solid #ccc;            
+            padding:0.2em;                    
+}
+
+/*gridview(table)設定*/
+        #content table, div.floatHead table {                
+                border-collapse:collapse;
+                border-spacing:1px;  
+                table-layout:fixed;
+                width:1%;
+                border-width:0;
+            }       
+
+        #content table thead, div.floatHead table thead {        
+            background-color:#3a5795;
+            color:white;
+            border:1px solid white;
+            font-weight:bold;
+        }
+         #content table tr, div.floatHead table tr {        
+            white-space:pre; 
+        }
+        #content table th,#content table  td, div.floatHead table th, div.floatHead table td {
+            overflow:hidden;     
+            width:6em;            
+            text-overflow:ellipsis;
+            min-width:1em;
+            max-width:50em;          
+        }
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//                    
+        .otherBrowser_tdth_padding {
+            padding-left:0.15em;
+            padding-right:0.15em;
+        }
+      
+         #content table tbody td, div.floatHead table tbody td {
+            height:1.4em;
+            height:1.4em;
+            font-size:1em;
+            border:1px solid #555;                  
+        }
+        #content table thead th, div.floatHead table thead th {
+            height:1.6em;
+            line-height:1.6em;
+            font-size:1.1em;   
+            border:1px solid #555;  
+            font-weight:bold; 
+            text-align:center;         
+        }
+   
+        /*浮動表頭之父層div 設定*/
+       div.floatHead {              
+            background-color:#f8f8f8;
+            border-top:1px solid #bbb;   
+            border-left:1px solid #bbb;          
+            padding-top:0.2em;
+            padding-left:0.2em;                    
+        }
+
+div.floatHead .fixedHeaderTable thead {        
+            background-color:#3a5795;          
+        }
+
+/*hover、隔行變色、selected之顏色*/
+.gridview_tr_hover {
+    background-color:#feebeb;
+}
+.gridview_tr_even {  
+    background-color:#ffffff;
+}
+.gridview_tr_selected {   
+    background-color:#ddd;  
+}
+/*gridview 表頭上方的工具列 ul*/
+.gridview_border ul.gridview_header_operation,.floatHead ul.gridview_header_operation {
+    display:block;
+    height:1.9em;  
+    list-style:none;
+    font-size:1em;  
+    color:#0085cc;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+}
+/*gridview設定為inline，以便超出父容器時得以隱藏*/
+    .gridview_border ul.gridview_header_operation li ,.floatHead ul.gridview_header_operation li{
+        display:inline;   
+        text-decoration:none;        
+        margin-right:1.8em; 
+    }
+/*gridview 表頭上方的工具列 ul 內的 全選、取消全選按鈕 容器li*/
+      .gridview_border ul.gridview_header_operation li.selectionButton div,.floatHead ul.gridview_header_operation li.selectionButton div {           
+            margin-right: 0.8em;
+            display:inline-block;          
+}
+.gridview_border ul.gridview_header_operation li.selectionButton a,.floatHead ul.gridview_header_operation li.selectionButton a {   
+    display:inline-block;
+    border:1px double #0085cc;
+    background-color:white;
+    color:#0085cc;
+    font-weight:bold;  
+    margin-right:0.3em;  
+    padding-right:0.2em;
+    padding-left:0.2em;  
+    float:left;     
+}
+
+/*gridview 表頭上方的工具列 ul 內的 上下頁按鈕容器 li 內的 div容器(如此做才對齊)*/
+.gridview_border ul.gridview_header_operation li.pageButton div ,.floatHead ul.gridview_header_operation li.pageButton div{          
+            margin-right: 0.8em;
+            display:inline-block;          
+}
+/*gridview 表頭上方的工具列 ul 內的 上下頁按鈕容器 li*/
+    .gridview_border ul.gridview_header_operation li.pageButton span ,.floatHead ul.gridview_header_operation li.pageButton span{    
+        display:inline-block;
+        width:20px;
+        height:20px;           
+        background-image: url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=btnMap_blue&dpi=1920);
+        margin-right:1.2em;  
+        float:left;        
+    }
+        .gridview_border ul.gridview_header_operation li.pageButton h4.selectedPage,.floatHead ul.gridview_header_operation li.pageButton h4.selectedPage { 
+            display:inline-block;         
+            font-weight:bold;
+            float:left;
+        }
+    .gridview_border ul.gridview_header_operation li.pageButton  select , .floatHead ul.gridview_header_operation li.pageButton  select{        
+        display:inline-block;
+        outline:none;   
+        margin-right:1em;
+        float:left;      
+    }
+
+    .gridview_border ul.gridview_header_operation li.pageButton span.first,.floatHead ul.gridview_header_operation li.pageButton span.first{background-position:0 -40px;}
+    .gridview_border ul.gridview_header_operation li.pageButton span.prev,.floatHead ul.gridview_header_operation li.pageButton span.prev{background-position:-20px -40px;}
+    .gridview_border ul.gridview_header_operation li.pageButton span.next,.floatHead ul.gridview_header_operation li.pageButton span.next{background-position:-40px -40px;}
+    .gridview_border ul.gridview_header_operation li.pageButton span.last,.floatHead ul.gridview_header_operation li.pageButton span.last{background-position:-60px -40px;}
+      
+/*gridview 表頭上方的工具列 ul 內的頁數、筆數 容器 li*/
+ .gridview_border ul.gridview_header_operation li.tableCount div,.floatHead ul.gridview_header_operation li.tableCount div {         
+            margin-right: 0.8em;
+            display:inline-block;          
+}
+.gridview_border ul.gridview_header_operation li.tableCount,.floatHead ul.gridview_header_operation li.tableCount {
+    display:inline-block;  
+    text-align:left;
+    font-weight:bold;   
+    vertical-align:top;
+    font-size:1em;     
+}  
+    .gridview_border ul.gridview_header_operation li.selectionButton a:hover, .floatHead ul.gridview_header_operation li.selectionButton a:hover {
+        cursor:pointer;  
+        color:red;
+        border:1px solid red;
+    }    
+    .gridview_border ul.gridview_header_operation li.pageButton span:hover, .floatHead ul.gridview_header_operation li.pageButton span:hover {
+        cursor:pointer;  
+        background-image: url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=btnMap_red&dpi=1920);
+    }
+/*end 06-server端下半部gridview(#PanelGrid)之設定*/
+/*===============table/gridview設定========table/gridview設定===========table/gridview設定===========*/
+  
+
+/*07 toolbar  and confirmbar*/
+        .csoa_toolbar ,.csoa_confirmbar,#PanelToolBar{
+            width: 99.5%;
+            padding:0.25% 0.2%;
+            color:#333;
+            font-size:1em;
+            font-family:Airal,"微軟正黑體",sans-serif;
+            font-weight:700;
+            line-height:1.6;          
+        }       
+        .csoa_toolbar ul,.csoa_confirmbar ul ,#PanelToolBar div{
+            display: block;
+            list-style: none;
+            height:2em;            
+            padding-right:0.3em;
+            padding-left:0.3em;
+            padding-top:0.3em;
+            padding-bottom:0.3em;
+        }
+        /*#PanelToolBar div 為servere端maintain程式 toolbar 之ul */
+        .csoa_toolbar ul,#PanelToolBar div{
+            background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #0074bb), color-stop(100%, #00b8ff));
+                        background-image: -webkit-repeating-linear-gradient(top, #0074bb 0%, #00b8ff 100%);
+                        background-image: -moz-repeating-linear-gradient(top, #0074bb 0%, #00b8ff 100%);
+                        background-image: -ms-repeating-linear-gradient(top, #0074bb 0%, #00b8ff 100%);
+                        background-image: -o-repeating-linear-gradient(top, #0074bb 0%, #00b8ff 100%);
+                        background-image: repeating-linear-gradient(to bottom, #0074bb 0%, #00b8ff 100%);
+                         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#0074bb, endColorstr=#00a7ee,GradientType=0)";
+        }       
+            .csoa_toolbar ul li,.csoa_confirmbar ul li {
+                display: block;
+                float: left;
+                margin-right:0.3em;               
+            }
+            /*servere端maintain程式 toolbar 之ul  li */             
+            #PanelToolBar div div {
+                display: block;
+                float: left;
+                margin-right:0.3em;
+                background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #ffffff), color-stop(100%, #d0d0d0));
+                background-image: -webkit-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                background-image: -moz-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                background-image: -ms-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                background-image: -o-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                background-image: repeating-linear-gradient(to bottom, #ffffff 0%, #d0d0d0 100%);
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#d0d0d0,GradientType=0)";              
+                width:108.8px;
+                height:32px;               
+                padding:0 3.2px;
+                letter-spacing:-0.07em;        
+                -webkit-border-radius:0.25em ;
+                -moz-border-radius: 0.25em;
+                -ms-border-radius: 0.25em;
+                -o-border-radius: 0.25em;
+                border-radius: 0.25em;              
+            }
+            /*toolbar 右方狀態 label*/          
+            #PanelToolBar div h4 {
+                display: block;
+                float: right;
+                margin-right:0.3em;
+                color:#101010;
+                font-weight:700;
+                background-color:#fefefe;
+                width:10em;
+                height:1.8em;
+                padding-top:0.2em;
+                padding-left:0.3em;
+            }
+            /*servere端maintain程式 toolbar 之 li a*/            
+            #PanelToolBar div div input {
+                        background-color:transparent;
+                        text-align:right;
+                        color:#111;
+                        display:block;
+                        float:right;
+                        font-family:Airal,"微軟正黑體",sans-serif;
+                        font-weight:500;
+                        font-size:1em;                      
+                        height:32px;
+                        line-height:32px;                       
+                        border:none;                       
+            }              
+                #PanelToolBar div div input:focus {
+                        outline:none;
+                        color:white;                   
+                }                
+                 #PanelToolBar div div:hover {
+                background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #d0d0d0), color-stop(100%, #ffffff));
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+                background-image: repeating-linear-gradient(to bottom, #d0d0d0 0%, #ffffff 100%);
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#d0d0d0, endColorstr=#ffffff,GradientType=0)";  
+                }      
+            .csoa_toolbar ul li a,.csoa_confirmbar ul li a {
+                        background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #ffffff), color-stop(100%, #d0d0d0));
+                        background-image: -webkit-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: -moz-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: -ms-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: -o-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: repeating-linear-gradient(to bottom, #ffffff 0%, #d0d0d0 100%);
+                         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#d0d0d0,GradientType=0)";
+                        text-align:right;
+                        color:#111;
+                        display:block;                     
+                        text-decoration:none;
+                        float:left;
+                        font-family:Airal,"微軟正黑體",sans-serif;
+                        font-weight:500;
+                        font-size:1em;  
+                        padding-left:3.2px;
+                        padding-right:3.2px;                      
+                        width:108.8px;
+                        height:32px; 
+                        line-height:32px;
+                        overflow:hidden;
+                        text-indent:3.2px;      
+                        letter-spacing:-0.07em;                 
+                        -webkit-border-radius:0.25em ;
+                        -moz-border-radius:0.25em;
+                        -ms-border-radius: 0.25em;
+                        -o-border-radius: 0.25em;
+                        border-radius: 0.25em;
+                }
+              .csoa_confirmbar ul a {
+                border:solid 1px #333333;
+            }
+             .csoa_toolbar ul li a:hover,.csoa_confirmbar ul li a:hover {
+                        background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #d0d0d0), color-stop(100%, #ffffff));
+                        background-image: -webkit-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: -moz-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: -ms-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: -o-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: repeating-linear-gradient(to bottom, #d0d0d0 0%, #ffffff 100%);
+                        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#d0d0d0, endColorstr=#ffffff,GradientType=0)";
+                        color:#0064aa;                        
+                    }
+          
+                  .csoa_toolbar ul li span , .csoa_confirmbar ul li span,#PanelToolBar div div span, .csoa_opbar ul li span,
+                  #csoa_alert .csoa_alert_header span.img_information,#csoa_alert .csoa_alert_header span.img_confirm,
+                  #csoa_alert .csoa_alert_header span.img_warring
+                  {
+                        background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=btnMap&dpi=1920);
+                        border:solid 1px #eaeaea;
+                        display:block; 
+                        width:20px;
+                        height:20px;
+                        float:left;      
+                           margin-top:0.15em;
+                        margin-left:0.12em;  
+                    }
+/*FunMaintain*/ 
+/* textbar&opbar 分散式功能(不使用toolbar、confirmbar，使用opbar及textbar) */
+       div.csoa_textbar{   
+            font-size:1em;
+            font-family:Airal,"微軟正黑體",sans-serif;
+            font-weight:500;           
+            padding:0.2em;
+            overflow:auto;                              
+        }    
+         div.csoa_textbar h4 {           
+            float:left;         
+            color:#555;      
+            font-size:1.05em;
+            line-height:1.6em;            
+        }      
+        .csoa_textbar ul{
+            display: block;
+            list-style: none;              
+            overflow:auto;                
+        }                
+            .csoa_textbar ul li {                
+                float: left; 
+                text-align:center;
+                overflow:auto;
+                margin-right:0.2em;                       
+            }
+ //......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+                margin-bottom:0.2em;  
+            } 
+              .csoa_textbar ul.inline_ul {
+                margin:0 auto;               
+            } 
+              .csoa_textbar ul.inline_ul li {               
+                margin-right:0.2em;  
+                margin-bottom:0.2em;
+                margin-left:0;
+            }            
+                .csoa_textbar ul li a {
+                    cursor: default;                                
+                    background-color:#f3f3f3; 
+                    border:1px solid #888;
+                    color:#bbb;                   
+                    text-decoration:none;
+                    padding-left:0.1em;
+                    padding-right:0.1em;   
+                    margin:0 auto;  
+                    display:block; 
+                    float:right;                                   
+                    line-height:1.6em;
+                }
+            .csoa_textbar ul.block_ul li a {
+                float: none;
+            }
+              .csoa_textbar ul.inline_ul li a {
+                float: none;
+            }
+
+        .csoa_textbar ul li a[href] {
+                    background-color:none;         
+                    border:1px solid #888;
+                    color:#111;  
+        } 
+             .csoa_textbar ul li a[href]:hover {                       
+                        cursor:pointer;                    
+                        color:#df0000; 
+                        border:1px solid #df0000;
+                    }
+        .csoa_opbar{
+            width: 99.7%;
+            color:#333;
+            font-size:1em;
+            font-family:Airal,"微軟正黑體",sans-serif;
+            font-weight:500;
+            line-height:1.6;  
+            border:1px solid #ddd; 
+            margin:0 auto;      
+        }
+       
+        .csoa_opbar ul{
+            display: block;
+            list-style: none;   
+            padding:0.15em;  
+            overflow:auto; 
+            background-color:#eaeaea;                     
+        }  
+            .csoa_opbar ul li {
+                display: block;
+                float: left;
+                margin-right:0.2em; 
+                border:1px solid #999;                     
+                margin-bottom:0.1em;         
+            }
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+                    display:block;                     
+                    text-decoration:none;
+                    float:left;
+                    font-family:Airal,"微軟正黑體",sans-serif;
+                    font-weight:500;
+                    font-size:1em;  
+                    padding-left:2.4px;
+                    padding-right:2.4px;                      
+                    width:78px;                 
+                     height:29px; 
+                    line-height:29px;
+                    overflow:hidden;
+                    text-indent:2px;      
+                    letter-spacing:-0.07em;  
+                }           
+            .csoa_opbar ul li a[href] {
+                        background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #ffffff), color-stop(100%, #d0d0d0));
+                        background-image: -webkit-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: -moz-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: -ms-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: -o-repeating-linear-gradient(top, #ffffff 0%, #d0d0d0 100%);
+                        background-image: repeating-linear-gradient(to bottom, #ffffff 0%, #d0d0d0 100%);
+                         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#d0d0d0,GradientType=0)"; 
+                         color: #111; 
+                }
+             .csoa_opbar ul li a[href]:hover {
+                        background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #d0d0d0), color-stop(100%, #ffffff));
+                        background-image: -webkit-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: -moz-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: -ms-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: -o-repeating-linear-gradient(top, #d0d0d0 0%, #ffffff 100%);
+                        background-image: repeating-linear-gradient(to bottom, #d0d0d0 0%, #ffffff 100%);
+                        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#d0d0d0, endColorstr=#ffffff,GradientType=0)";
+                        cursor:pointer;                      
+                        color:#df0000;                      
+                    }   
+                .csoa_opbar ul li a span {
+                        background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=btnMap&dpi=1920&disabled=true);
+                        cursor:default;
+                } 
+                .csoa_opbar ul li a[href] span {
+                        background-image:url(/Csoa_Handler/Csoa_ImageHandler.ashx?type=btnMap&dpi=1920);
+                        cursor:pointer;
+                }    
+.csoa_opbar {
+    color:#df0000;
+}
+    ul li.clear {
+        clear: both;
+    }   
+/*end FunMaintain*/   
+            .csoa_opbar ul li span.clear,.csoa_toolbar ul li span.clear,.csoa_confirmbar ul li span.clear,#PanelToolBar div div span.clear{background-position:0 0;}
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+            .csoa_opbar ul li span.information,.csoa_toolbar ul li span.information,.csoa_confirmbar ul li span.information,#PanelToolBar div div span.information {background-position:-120px 0;}
+            .csoa_opbar ul li span.home,.csoa_toolbar ul li span.home,.csoa_confirmbar ul li span.home,#PanelToolBar div div span.home {background-position:-140px 0;}
+
+            .csoa_opbar ul li span.add,.csoa_toolbar ul li span.add,.csoa_confirmbar ul li span.add,#PanelToolBar div div span.add{background-position:0 -20px;}
+            .csoa_opbar ul li span.update,.csoa_toolbar ul li span.update,.csoa_confirmbar ul li span.update,#PanelToolBar div div span.update {background-position:-20px -20px;}
+            .csoa_opbar ul li span.delete,.csoa_toolbar ul li span.delete,.csoa_confirmbar ul li span.delete,#PanelToolBar div div span.delete {background-position:-40px -20px;}
+            .csoa_opbar ul li span.inquiry,.csoa_toolbar ul li span.inquiry,.csoa_confirmbar ul li span.inquiry,#PanelToolBar div div span.inquiry {background-position:-60px -20px;}
+            .csoa_opbar ul li span.pdf,.csoa_toolbar ul li span.pdf,.csoa_confirmbar ul li span.pdf,#PanelToolBar div div span.pdf {background-position:-80px -20px;}
+            .csoa_opbar ul li span.document,.csoa_toolbar ul li span.document,.csoa_confirmbar ul li span.document,#PanelToolBar div div span.document {background-position:-100px -20px;}
+            .csoa_opbar ul li span.refresh1,.csoa_toolbar ul li span.refresh1,.csoa_confirmbar ul li span.refresh1,#PanelToolBar div div span.refresh1 {background-position:-120px -20px;}
+            .csoa_opbar ul li span.print,.csoa_toolbar ul li span.print,.csoa_confirmbar ul li span.print,#PanelToolBar div div span.print {background-position:-140px -20px;}
+
+            .csoa_opbar ul li span.first,.csoa_toolbar ul li span.first,.csoa_confirmbar ul li span.first,#PanelToolBar div div span.first{background-position:0 -40px;}
+            .csoa_opbar ul li span.prev,.csoa_toolbar ul li span.prev,.csoa_confirmbar ul li span.prev,#PanelToolBar div div span.prev {background-position:-20px -40px;}
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+        
+            .csoa_opbar ul li span.lock,.csoa_toolbar ul li span.lock,.csoa_confirmbar ul li span.lock,#PanelToolBar div div span.lock {background-position:-40px -60px;}
+            .csoa_opbar ul li span.freelogl1,.csoa_toolbar ul li span.freelogl1,.csoa_confirmbar ul li span.freelogl1,#PanelToolBar div div span.freelogl1 {background-position:-60px -60px;}
+            .csoa_opbar ul li span.freelogl2,.csoa_toolbar ul li span.freelogl2,.csoa_confirmbar ul li span.freelogl2,#PanelToolBar div div span.freelogl2 {background-position:-80px -60px;}
+            .csoa_opbar ul li span.freelogl3,.csoa_toolbar ul li span.freelogl3,.csoa_confirmbar ul li span.freelogl3,#PanelToolBar div div span.freelogl3 {background-position:-100px -60px;}
+            .csoa_opbar ul li span.caculate,.csoa_toolbar ul li span.caculate,.csoa_confirmbar ul li span.caculate,#PanelToolBar div div span.caculate {background-position:-120px -60px;}
+            .csoa_opbar ul li span.check,.csoa_toolbar ul li span.check,.csoa_confirmbar ul li span.check,#PanelToolBar div div span.check {background-position:-140px -60px;}
+
+            .csoa_opbar ul li span.datelogo,.csoa_toolbar ul li span.datelogo,.csoa_confirmbar ul li span.datelogo,#PanelToolBar div div span.datelogo{background-position:0 -60px;}
+            .csoa_opbar ul li span.datelogo1,.csoa_toolbar ul li span.datelogo1,.csoa_confirmbar ul li span.datelogo1,#PanelToolBar div div span.datelogo1 {background-position:-20px -60px;}
+
+            #csoa_alert .csoa_alert_header span.img_information {background-position: -80px,-80px;}
+            #csoa_alert .csoa_alert_header span.img_confrim {background-position: -80px,-100px;}
+            #csoa_alert .csoa_alert_header span.img_warring {background-position: -80px,-120px;}
+
+/*toolbar 右方的狀態文字*/
+.csoa_toolbar_lbl {
+    color:#df0000;
+}
+                ul li#clear {
+                    clear: both;
+                }
+ 
+/*end 07 toolbar  and confirmbar*/
+
+/*08 登陸畫面之dialog*/
+.csoa_dialog_background {   
+    background-color:#cecece;
+}
+     .csoa_dialog {
+            width: 35%;
+            height: 50%;
+            background-color:white;
+            color:#363636;
+            position:relative;
+            top:12%;
+            margin:0 auto;
+            text-align:center;
+            font-size:1em;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+         
+            .csoa_dialog .csoa_dialog_header {
+                width: 99.6%;
+                height: 10%;
+                background-color:#e8f6ff;
+                border: solid 2px #b8e2fb ;
+                color: #363636;
+                text-align: center;                
+                line-height:1.8;
+                font-size:1.2em;
+                font-weight:bold;
+                font-family:Airal,"微軟正黑體",sans-serif;
+                
+            }
+         
+            .csoa_dialog .csoa_dialog_content {
+                color:red;
+                font-size:0.9em;
+                font-weight:400;
+                overflow:auto;
+                width:80%;
+                height:60%;
+                margin:0 auto;
+                /*border:solid 1px blue;*/
+            }
+             .field {
+            overflow:auto;
+        }
+        .csoa_fieldset form ul {
+            display:block;
+            overflow:auto;
+            text-decoration:none;
+            list-style:none;
+            margin:0 auto;
+            padding-left:1%;
+            width:98%;            
+            background:#f2f2f2;  
+        }
+     
+            .csoa_fieldset form ul li {
+                width:28em;
+                font-size:1em;
+                height:2.3em;
+                line-height:1.4em;
+                margin-bottom:0.5em;
+                margin-right:0.5em;
+                float:left;
+                display:block;                   
+            }
+.csoa_fieldset form input[type=text]:hover, .csoa_fieldset form input[type=password]:hover, .csoa_fieldset form select:hover {
+    border:1px solid #333;
+}
+.csoa_fieldset form input[type=text]:focus, .csoa_fieldset form input[type=password]:focus, .csoa_fieldset form select:focus {
+    border:1px solid #333;
+}         
+                    .csoa_fieldset form ul li.csoa_newLine,.csoa_fieldset form .csoa_newLine {
+                         clear:both;
+                    }   
+                .csoa_fieldset form ul li h4 {
+                     line-height:1.6em;
+                     font-size:1em;
+                     height:1.4em;
+                    text-align:right;
+                    padding-right:0.2em;
+                    width:9em;
+                    float:left;                    
+                    font-weight:500;                   
+                }
+                
+            
+                .csoa_fieldset form ul li input {
+                    width:10em;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+                }
+                .csoa_fieldset form ul li select {
+                    font-size:1em;
+                    display:block;
+                    border:solid 1px #333;
+                    font-weight:500;
+                }
+                .fieldset form ul li.csoa_multiField input {
+                    margin-right:0.2em;
+                }
+/*end 08 登陸畫面之dialog*/
+
+/*09 sortable/addable*/
+        div.csoa_sortable {
+            border:1px solid #aaa;          
+            padding:0.2em;          
+        }
+           div.csoa_sort_header {       
+            list-style:none;            
+            display:block;  
+            padding-left:0.1em;
+            padding-right:0.1em;  
+            margin-bottom:0.3em;   
+            border:1px solid #888; 
+            margin-right:0.2em;
+ //......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+            display:block;            
+            background-color:#fff;                 
+            padding-left:0.2em;
+            padding-right:0.2em;        
+            overflow:auto;  
+            height:90%;           
+        }
+            ul.csoa_sort_body li {
+                border:1px solid #aaa;
+                color:#333;
+                margin-bottom:0.2em;              
+                background-color:#fcfcfc;     
+                overflow:hidden; 
+                padding-left:0.2em;
+                padding-right:0.2em;
+            }
+/*end 09 sortable/addable*/
+
+/*10 panel*/
+        div.csoa_panel {
+            border:1px solid #888; 
+            width:95%;  
+            margin:0 auto;
+        }
+           div.csoa_panel_header {       
+            list-style:none;            
+            display:block;            
+            margin-bottom:0.2em;
+            border-bottom:1px solid #fff;            
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+           div.csoa_panel div.csoa_textbar{   
+            
+            margin:0 auto;               
+        }    
+       
+        ul.csoa_panel_body {           
+            list-style:none;            
+            display:block;            
+            background-color:#fff;
+            padding-left:0.2em;
+            padding-right:0.2em;        
+            overflow:auto;
+        }
+            ul.csoa_panel_body li {
+                border:1px solid #aaa;
+                color:#333;
+                margin-bottom:0.2em;              
+                background-color:#fcfcfc;                    
+                overflow:hidden; 
+                padding-left:0.2em;
+                padding-right:0.2em;
+            }
+/*end 10 panel*/
+
+ /*11 grid_form/addable*/
+        div.csoa_gridform {           
+            border:1px solid #888; 
+            height:99%; 
+            overflow:auto;       
+        }
+        div.csoa_gridform hr {
+             margin-bottom:0.2em;
+             color:#888;
+        }
+           div.csoa_gridform_header {       
+            list-style:none;            
+            display:block;    
+            padding-left:0.2%;
+            padding-right:0.2%;           
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+            color:#fff;
+            height:2.2em;          
+            line-height:2.2em;
+        }
+           div.csoa_gridform_header title{
+        }
+        div.csoa_gridform_formset {  
+             overflow:auto;
+             width:99.6%;
+             margin:0 auto;
+        }         
+            div.csoa_gridform_header h5 span{
+                display:none;
+            }
+            div.csoa_gridform_header h5 i{
+                display:none;
+            }
+             div.csoa_gridform h5{                            
+                    float:left;
+                    text-align:center;
+                    width:3em;
+                    font-size:1em;                
+                    margin-left:0.4em;
+                    line-height:2.2em;
+                    overflow:hidden;                
+            }           
+             div.csoa_gridform_header h5{
+                   font-weight:700; 
+                   text-align:center; 
+            }
+        div.csoa_gridform_formset .csoa_gridform_form ul.csoa_gridform_ul {           
+            list-style:none;            
+            display:block;            
+            background-color:#fafafa; 
+            overflow:auto;         
+        }        
+           div.csoa_gridform_formset .csoa_gridform_form ul.csoa_gridform_ul li {           
+                color:#333;            
+                background-color:#f8f8f8;    
+                border-bottom:0.2em solid #ececec;                  
+                overflow:hidden;                
+            }
+            div.csoa_gridform_formset .csoa_gridform_form ul.csoa_gridform_ul li input[type=checkbox]{           
+                width:0.9em;  
+                font-weight:200;       
+            }
+            #content ul.csoa_gridform_ul li h5 input[type=text], #content ul.csoa_gridform_ul li h5 textarea{
+                width:90%;
+            }          
+        #content  .ui-selecting { background: #eaeaea; }
+        #content  .ui-selected { background: #e3e3e3; }
+        div.csoa_gridform_formset .csoa_gridform_form ul.csoa_gridform_ul li.csoa_gridform_level1 {
+            color:#0085cc;            
+        }
+        div.csoa_gridform_formset .csoa_gridform_form ul.csoa_gridform_ul li.csoa_gridform_level1:hover {
+            cursor:pointer;            
+        }
+/*end 10 gridform*/
+
+/* 11 tabs&photo_panel*/
+  .csoa_tabs {   
+            height:99.8%;
+            width:99.8%;
+            /*padding: 0.2% 0.2%;*/
+            /*padding-top:0.2%;*/
+            margin:0 auto;         
+        }
+        .csoa_tabs_header {
+            margin-top:0.2em;
+            
+        }
+        .csoa_tabs_header ul {
+            list-style:none;                     
+            overflow:auto;
+            background-color:#f5f5f5;
+            /*margin-bottom:0.2em;*/
+            padding-top:0.3em;
+            padding-left:0.15em;
+            padding-right:0.1em;
+            border:1px solid #aaa;
+            border-bottom:none;
+           
+        }
+            .csoa_tabs_header ul li {
+                float:left;
+                margin-left:0.1em;               
+            }
+        .csoa_tabs_header a {
+                text-decoration:none;   
+               display:block;
+               padding:0.2em;
+                border:1px solid #eaeaea;   
+                /*border-bottom:none;*/  
+                /*border-color:transparent;*/
+                height:1.5em;
+                line-height:1.5em;
+                background-color:#0085cc;  
+                border-top-right-radius:0.4em;
+                border-top-left-radius:0.4em;
+                color:#fff;
+                text-align:center;
+                font-weight:bold;                
+        }
+        .csoa_tabs_header a:hover {              
+                background-color:#3a5795;  
+                color:#fff;  
+        }
+      #content  .csoa_tabs_selected {         
+                background-color:#fff;
+                border-color:#0085cc;  
+                border-bottom-color:#eaeaea;
+                color:#111;                  
+        }
+
+        .csoa_tabs_body {          
+            border:1px solid #aaa; 
+            border-top:1px solid #ccc; 
+            overflow:auto;                       
+            /*padding:0.2em 0.3em;*/   
+              
+        }
+        .csoa_tabs_body_container {  
+            /*width:98%;*/
+            height:97.5%;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......// 
+            height:99%;
+        }
+            .csoa_photo_panel li {
+                margin-right:0.3em;
+                margin-bottom:0.3em;
+                float:left;                 
+                background-color:#fff;   
+                border:0.2em solid #999;  
+                display:none;  
+                width:8em;
+                height:11.6em;            
+            }
+                .csoa_photo_panel li:hover {
+                    cursor:pointer;
+                }
+        .csoa_photo_panel li img{
+                width:8em;
+                height:10em;  
+                border-bottom:3px solid #aaa;
+                /*在img元素會多出約3px內margin-bottom空白，故須以vertical-align bottom來處理*/
+                vertical-align:bottom            
+        }      
+        .csoa_photo_panel li h4{ 
+            height:1.6em;   
+            line-height:1.6em;
+            font-size:0.9em;     
+            overflow:hidden;
+            background-color:#333;
+            color:white;           
+        }
+/*end 11 tabs&photo_panel*/
+
+/*12 panel_viewer(可移動絕對定位之圖檔或對話方塊panel*/
+/*csoa_panel_viewer專放圖片之style*/
+          .csoa_panel_viewer {
+            position:absolute;
+            left:15%;
+            top:1%;
+            width:70%;
+            height:95%;         
+  //......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//r_dialog {
+            /*padding: 1.5em;*/ 
+            border:1px solid #eaeaea;          
+            background-color:#fefefe;
+            display:none;
+            overflow:hidden;
+            z-index:50;            
+           
+        }
+     
+       .csoa_panel_viewer_size1 {  
+           position:absolute;   
+            left:35%;
+            top:30%;
+            width:30%;
+            height:30%; 
+            padding: 1.5em;
+             -moz-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+            -webkit-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+             box-shadow:1px 1px 7px #bbb,-1px -1px 7px #999;   
+        }
+    .csoa_panel_viewer_size2 { 
+        position:absolute;    
+            left:30%;
+            top:25%;
+            width:40%;
+            height:40%; 
+            padding: 1.5em;
+             -moz-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+            -webkit-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+             box-shadow:1px 1px 7px #bbb,-1px -1px 7px #999;   
+        }
+    .csoa_panel_viewer_size3 {
+        position:absolute;     
+            left:25%;
+            top:20%;
+            width:50%;
+            height:50%; 
+            padding: 1.5em;
+             -moz-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+            -webkit-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+             box-shadow:1px 1px 7px #bbb,-1px -1px 7px #999;   
+        }   
+      .csoa_panel_viewer_size4 {  
+          position:absolute;   
+            left:20%;
+            top:15%;
+            width:60%;
+            height:60%;
+            padding: 1.5em; 
+             -moz-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+            -webkit-box-shadow: 1px 1px 7px #bbb,-1px -1px 7px #999;
+             box-shadow:1px 1px 7px #bbb,-1px -1px 7px #999;   
+        }   
+      .csoa_panel_viewer_fixed {  
+           position:relative; 
+           margin:0 auto;
+            width:100%;
+            height:100%; 
+            border:none;          
+        }
+            /*包住圖檔的div*/
+            .csoa_panel_viewer div.csoa_photo_viewer_container {
+                overflow:auto;
+                height:100%;
+                width:100%;
+                /*border:2px solid red;*/
+                position:absolute;
+                background-color:#555;
+                
+            }
+                 .csoa_panel_viewer div:hover {
+                cursor:crosshair;
+            }
+            .csoa_panel_viewer div img {
+                position:absolute;
+                left:0;
+                top:0;
+            }  
+            
+h5.csoa_close {   
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=40)";    
+    position: absolute;  
+    z-index: 10;
+    left: 0;
+    top: 0;
+    font-size: 3em;
+    line-height: 1em;   
+    background-color: #111;
+    color: white;     
+}
+div.csoa_close { 
+    position: absolute;  
+    z-index: 10;
+    right: 2%;
+    top: 5%;
+    font-size: 1.5em;
+    line-height: 1em; 
+    height:1em;
+    width:1em;  
+    background-color: white;
+    color: #333;   
+    font-weight:500;  
+    text-align:center;
+    border:1px solid #333;
+}
+div.csoa_close_fixed { 
+    position: absolute;  
+    z-index: 10;
+    right: 1em;
+    top: 1em;
+    font-size: 1.5em;
+    line-height: 1em; 
+    height:1em;
+    width:1em;  
+    background-color: white;
+    color: #333;   
+    font-weight:500;  
+    text-align:center;
+    border:1px solid #333;   
+}
+    h5.csoa_close:hover,div.csoa_close:hover,div.csoa_close_fixed:hover{
+        cursor:pointer;
+    }
+    div.csoa_close:hover,div.csoa_close_fixed:hover {
+        background-color: #333;
+        color:white;   
+    }
+
+    h5.csoa_move {   
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=40)";
+    position: absolute;  
+    z-index: 10; 
+    border:1px solid #555;  
+    background-color: #eaeaea;    
+}
+    div.csoa_move {   
+    -moz-opacity: 0.3;
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=30)";
+    position: absolute;  
+    z-index: 10;    
+    background-color: #eaeaea;    
+}
+        h5.csoa_move:hover {
+            cursor: move;
+        }   
+
+h5.csoa_moveTop {
+    left: 46%;
+    top: 0;
+    width:6em;
+    height:1.5em;
+    border-top:none;
+   
+}
+h5.csoa_moveBottom {
+    left: 46%;
+    bottom: 0;
+   width:6em;
+    height:1.5em;
+    border-bottom:none;
+}
+h5.csoa_moveLeft {
+    left: 0;
+    top: 44%;
+    width:1.5em;
+    height:6em;
+    border-left:none;
+}
+h5.csoa_moveRight {
+    right: 0;
+    top: 44%;
+    width:1.5em;
+    height:6em;
+    border-right:none;
+}
+
+div.csoa_moveTop {
+    left: 0%;
+    top: 0;
+    width:100%;
+    height:5%;
+    border-top:none;
+   
+}
+div.csoa_moveBottom {
+    left: 0%;
+    bottom: 0;
+    width:100%;
+    height:5%;
+    border-bottom:none;
+}
+div.csoa_moveLeft {
+    left: 0;
+    top: 5%;
+    width:2%;
+    height:90%;
+    border-left:none;
+}
+div.csoa_moveRight {
+    right: 0;
+    top: 5%;
+    width:2%;
+    height:90%;
+    border-right:none;
+}       
+
+/*end 12 panel_viewer(可移動絕對定位之圖檔或對話方塊panel*/
+
+/*13 listbox*/
+.csoa_listbox {    
+    height:99%;
+    width:99%;
+    margin:0 auto;
+    /*border:1px solid red;*/
+}
+ul.csoa_listbox_source {
+    border:1px solid #888;
+    width:42%;
+    height:99%;
+    float:left;
+    background-color:white;
+     list-style:none;   
+    overflow:auto;
+}
+ul.csoa_listbox_target {
+    border:1px solid #888;
+    width:42%;
+    height:99%;
+    float:left;
+     background-color:white;
+     list-style:none;  
+     overflow:auto; 
+}
+.csoa_listbox ul li {
+      margin:0.1em;
+   
+}
+.csoa_listbox ul li:hover {
+     cursor:pointer;     
+     background-color:#eaeaea;
+}
+.csoa_listbox ul li.listbox_item_selected {   
+     color:white;
+     background-color:#0085cc;
+}
+
+.csoa_listbox_button {
+    float:left; 
+    width:10%;   
+    height:93%;
+    padding:3% 1%;   
+    /*border:1px solid blue;*/
+}
+.csoa_listbox_button a{
+         display:block;
+         text-decoration:none;
+         text-align:center;
+         width:85%;
+        height:1.6em;
+        line-height:1.6em;      
+        font-weight:bold;
+        font-size:1em;         
+        /*background-color:white;*/ 
+        border:1px solid #888;        
+        margin:20% auto;   
+}
+.csoa_listbox_button a.font_08{   
+        font-size:0.8em;  
+}
+    .csoa_listbox_button a.listbox_selectOne {
+        margin-bottom: 40%;
+    }
+    .csoa_listbox_button a:hover {
+        cursor:pointer;
+        color:#df0000;    
+        border:1px solid #df0000;    
+    }
+
+/*end 13 listbox*/
+
+/*14-footer block*/
+#footer {
+    position:absolute;
+    left:20%;   
+    bottom:0;   
+    width: 60%;
+    margin:0 auto;  
+    height:1.2em;
+    line-height:1.2em;
+    text-align:center;  
+    color:#888;
+    z-index:10;
+    font-size:0.8em;
+}
+/* end 14-footer block*/
+
+/*15-alert&confirm dialog*/
+.csoa_alert_background {  
+    position:absolute;    
+    z-index:99;
+    background-color:white;
+    -moz-opacity: 0.2; /* Moz + FF舊版 */
+    opacity: 0.2;  /*IE9、IE10及chrome、ff、opera、safari較新版*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=20)"; /*IE8 only*/
+}
+     .csoa_alert {
+            width: 25%;         
+            color:#222;
+            position:absolute;
+            top:15%;
+            left:37.5%;
+            background-color:white;
+            margin:0 auto;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//        
+        }
+        .alert_border {
+            border:0.2em solid #d9e1ec;   
+        }      
+            .csoa_alert .csoa_alert_header {
+                width: 100%;
+                height: 2.0em; 
+                text-align: center;                
+                line-height:2.0em;
+                font-size:1.3em;
+                font-weight:bold;
+                font-family:Airal,"微軟正黑體",sans-serif; 
+                border-bottom:1px solid #ffaeae;
+                background-color:#feebeb; 
+                color:#637aae; 
+            }
+                .csoa_alert .csoa_alert_header:hover {
+                    cursor:move;
+                }         
+            .csoa_alert .csoa_alert_content {                  
+                overflow:auto;
+                width:96%;
+                height:6em;
+                margin:0 auto;   
+                padding:0.5em;               
+            }
+                .csoa_alert .csoa_alert_content:hover {
+                    cursor: move;
+                }         
+
+        .csoa_alert .csoa_alert_confirm {
+            /*width:100%;*/
+            height:2.5em;
+            padding-top:0.4em;   
+            /*background-color:#aaa;*/
+            margin:0 auto; 
+            overflow:auto;           
+        }
+     .csoa_alert .csoa_alert_confirm a {   
+          display:block;
+         text-decoration:none;
+         width:4.5em;
+        height:1.5em;
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+        font-weight:bold;
+        font-size:1.0em;         
+        background-color:white;      
+    }
+       .csoa_alert .csoa_alert_confirm a:hover {          
+        border:0.1em solid #0085cc;   
+        cursor:pointer; 
+        color: #0085cc;    
+    }
+/*end 15-alert&confirm dialog*/
+
+
+/* jQuery class*/
+.lowPassqordPadding {
+    padding-top: 1.2em;
+}
+.header_color{
+    color:yellow;
+}
+/*欄位有錯誤時採用jQuery tooltip時之專用class*/
+.csoa_tooltip {            
+            color:#df0000;          
+            font-size:0.9em;
+            border:1px solid #df0000;
+            padding:0.2em 0.4em;        
+}
+/*畫面楚於新增狀態時之不同底色之專用class*/
+.csoa_form_style_add {
+    background-color: #fffad7;
+}
+.csoa_download_iframe {
+    display:none;
+}
+.csoa_borderTransparent {
+    border-color:transparent;
+}
+
+/*textbar(畫面再確認)內之a tag之background-image(橘色按鈕)專用class   */
+.tag_a_style_textbar_orange {              
+    background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0%, #fff5c4), color-stop(100%, #fee45d));
+    background-image: -webkit-repeating-linear-gradient(top, #fff5c4 0%, #fee45d 100%);
+    background-image: -moz-repeating-linear-gradient(top, #fff5c4 0%, #fee45d 100%);
+    background-image: -ms-repeating-linear-gradient(top, #fff5c4 0%, #fee45d 100%);
+    background-image: -o-repeating-linear-gradient(top, #fff5c4 0%, #fee45d 100%);
+    background-image: repeating-linear-gradient(to bottom, #fff5c4 0%, #fee45d 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff5c4, endColorstr=#fee45d,GradientType=0)";            
+}
+/* end jQuery class*/
+
+/*#content 內的特殊用於addClass用的class*/
+#content .csoa_text_left {text-align: left;} #content .csoa_text_center {text-align: center;} #content .csoa_text_right {text-align: right;}
+#content .csoa_hidden { display: none;}
+/*2014#/02/23：定義所有無須依解析度大小修改寬度的input類欄位，此類欄位以em定義寬度後，使user操作時所能輸入的字數之個數一致*/
+ #content input[type=text],#content input[type=password]{                       
+    width:9em;
+}
+#content input[type=checkbox] {
+    width: 0.9em;
+    /*border:none;*/
+}
+/*日期欄位   每個欄位均有serverDate, csoa_field_data, hasDatepicker三個class*/          
+#content input[type=text].serverDate,#content input[type=text].csoa_date {
+    width:7em;
+}
+
+/*td、th、input 特定width/height之class*/
+#content div.w_auto { width: auto;}
+#content div.w10 {  width: 10em;} #content div.w11 {  width: 11em;}  #content div.w12 {  width: 12em;}  #content div.w13 {  width: 13em;} #content div.w14 {  width: 14em;}
+#content div.w15 {  width: 15em;} #content div.w16 {  width: 16em;}  #content div.w17 {  width: 17em;}  #content div.w18 {  width: 18em;} #content div.w19 {  width: 19em;}
+#content div.w20 {  width: 20em;} #content div.w21 {  width: 21em;}  #content div.w22 {  width: 22em;}  #content div.w23 {  width: 23em;} #content div.w24 {  width: 24em;}
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//
+//......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......Authentication......//#content a.w19, #content input.w19,#content h5.w19,#content li.w19 {  width: 19em;} #content a.w20, #content input.w20,#content h5.w20,#content li.w20 {  width: 20em;} #content a.w21, #content input.w21,#content h5.w21,#content li.w21 {  width: 21em;} #content a.w22, #content input.w22,#content h5.w22,#content li.w22 {  width: 22em;} 
+#content a.w23, #content input.w23,#content h5.w23,#content li.w23 {  width: 23em;}  #content a.w24, #content input.w24,#content h5.w24,#content li.w24 {  width: 24em;}  #content a.w25, #content input.w25,#content h5.w25,#content li.w25 {  width: 25em;} #content a.w26, #content input.w26,#content h5.w26,#content li.w26 {  width: 26em;} 
+#content a.w27, #content input.w27,#content h5.w27,#content li.w27 {  width: 27em;}  #content a.w28, #content input.w28,#content h5.w28,#content li.w28 {  width: 28em;} #content a.w29, #content input.w29,#content h5.w29,#content li.w29 {  width: 29em;} #content a.w30, #content input.w30,#content h5.w30,#content li.w30 {  width: 30em;}
+#content a.w35 ,#content input.w35,#content h5.w35,#content li.w35 {  width: 35em;}  #content a.w40, #content input.w40,#content h5.w40,#content li.w40 {  width: 40em;} #content a.w45, #content input.w45,#content h5.w45,#content li.w45 {  width: 45em;} #content a.w50, #content input.w50,#content h5.w50,#content li.w50 {  width: 50em;}
+
+
+  /*scrollbar-face-color:#FFD157;
+    scrollbar-highlight-color:#FFFF93;
+    scrollbar-3dlight-color:#FFFFB1;
+    scrollbar-darkshadow-color:#CD9F25;
+    scrollbar-shadow-color:#E1B339;
+    scrollbar-arrow-color:#FFFFB1;
+    scrollbar-track-color:#FFEF75;*/
+  
+/*.contentHeaderOpen {
+}
+.contentHeaderClose {
+}
+.contentSidebarOpen {
+}
+.contentSidebarClose {
+}*/
+/*畫面欄位檢核有誤時底色之專用class*/
+.csoa_inputText_error {
+    background-color: #fef3fd;
+}
+
+/*padding-left:0.3em;padding-right:0.3em;margin-left:0.2em;margin-right:0.2em;*/
