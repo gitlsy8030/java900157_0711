@@ -1,5 +1,5 @@
 ### java_900157_0711
-#####<br/>因考量目前駐點工作之開發環境係以使用自定義底層元件為主，fred 為兼顧原生Java開發模式及業界通用S2SH框架之技術運用，故利用工作餘暇實作模擬專案，以期能快速上手開發。誠摯歡迎您隨以下連結進入瀏覽，藉以了解我實作內容及技術，衷心期待您的指導與建議 (email:fred733524@gmail.com)，謝謝!
+#####<br/>本專案係 fred 利用工作之餘，為增進Java技能及框架技術掌握度，所實作之作品。誠摯歡迎您隨以下連結進入瀏覽，並衷心期待您的指導與建議，謝謝!
 * [實作目標](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/1.%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E7%9B%AE%E6%A8%99.pdf)</font>
 * [作品之分層架構、套件(Package)說明](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/2.JavaWeb%E4%BD%9C%E5%93%81%E4%B9%8B%E5%88%86%E5%B1%A4%E6%9E%B6%E6%A7%8B%E3%80%81%E5%A5%97%E4%BB%B6(Package)%E8%AA%AA%E6%98%8E.pdf)</font>
 * [作品畫面示例-1](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/3.JavaWeb%E4%BD%9C%E5%93%81%E7%95%AB%E9%9D%A2%E9%9D%A2%E7%A4%BA%E4%BE%8B-1.pdf)</font>
