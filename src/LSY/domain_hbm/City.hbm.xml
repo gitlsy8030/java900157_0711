@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="LSY.domain_hbm" >
+	<class name="City" table="City">
+		<id name="city_Nbr" column="city_Nbr">
+			<generator class="assigned" />
+		</id>
+		<!-- 	
+		<property name="cty_Nbr" type="java.lang.Integer">
+			<column name="cty_Nbr" />
+		</property>
+		 -->	
+		<property name="city_Code" type="java.lang.String">
+			<column name="city_Code" />
+		</property>			
+		<property name="region_Nbr" type="java.lang.Integer">
+			<column name="region_Nbr" />
+		</property>
+		<property name="city_Ename" type="java.lang.String">
+			<column name="city_Ename" />
+		</property>
+		<property name="city_Cname" type="java.lang.String">
+			<column name="city_Cname" not-null="true" />
+		</property>	
+		<property name="createUser" type="java.lang.String">
+			<column name="createUser" not-null="true" />
+		</property>
+		<property name="createStamp" type="java.util.Date">
+			<column name="createStamp" not-null="true" />
+		</property>
+		<property name="modifyUser" type="java.lang.String">
+			<column name="modifyUser" not-null="true" />
+		</property>
+		<property name="modifyStamp" type="java.util.Date">
+			<column name="modifyStamp" not-null="true" />
+		</property>
+		<many-to-one name="country" class="Country" column="cty_Nbr" ></many-to-one>
+	</class>
+</hibernate-mapping>

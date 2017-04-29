@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="LSY.domain_hbm" >
+	<class name="Country" table="Country">
+		<id name="cty_Nbr" column="cty_Nbr">
+			<generator class="assigned" />
+		</id>	
+		<property name="cty_Code" type="java.lang.String">
+			<column name="cty_Code" />
+		</property>	
+		<property name="region_Nbr" type="java.lang.Integer">
+			<column name="region_Nbr" />
+		</property>
+		<property name="currency_Nbr" type="java.lang.Integer">
+			<column name="currency_Nbr" />
+		</property>
+		<property name="cty_Ename" type="java.lang.String">
+			<column name="cty_Ename" />
+		</property>
+		<property name="cty_Cname" type="java.lang.String">
+			<column name="cty_Cname" not-null="true" />
+		</property>		
+		<property name="telId" type="java.lang.String">
+			<column name="telId" />
+		</property>
+		<property name="route_Nbr" type="java.lang.Integer">
+			<column name="route_Nbr" />
+		</property>
+		<property name="createUser" type="java.lang.String">
+			<column name="createUser" not-null="true" />
+		</property>
+		<property name="createStamp" type="java.util.Date">
+			<column name="createStamp" not-null="true" />
+		</property>
+		<property name="modifyUser" type="java.lang.String">
+			<column name="modifyUser" not-null="true" />
+		</property>
+		<property name="modifyStamp" type="java.util.Date">
+			<column name="modifyStamp" not-null="true" />
+		</property>
+		<set name="cityList" table="City">
+			<key column="cty_Nbr"/>
+			<one-to-many class="City"/>
+		</set>
+	</class>
+</hibernate-mapping>
+<!-- cascade="delete-orphan" -->

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<UserInfos> 
+  <UserInfo userId="e101" userName="林世淵" password="123" mail="" birthday="" engName="fred" department="" group="0"/>  
+  <UserInfo userId="e102" userName="林世淵" password="LgAeL0g7dZWIEDZy4DRpUA==" mail="fred@gmail.com" birthday="2001/11/22" tel="02-8855457" department="0" group="0" engName="fred" lastAlterPasswordTime="2016/08/21 17:25:10" lastLoginTime="" lastLogoutTime="" lastLogoutType="" passwordErrorTimes="0" reAssignPasswordFlag="0"/>
+</UserInfos>

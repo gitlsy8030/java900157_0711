@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="LSY.domain_hbm">
+	<class name="Products" table="Products">
+		<id name="productId" column="productId">
+			<generator class="assigned" />
+		</id>
+		<property name="productName" type="java.lang.String" column="productName" />
+		<property name="price" type="java.lang.Double" column="price" />
+		<property name="productDesc" type="java.lang.String" column="productDesc" />
+		<property name="onlineDate" type="java.util.Date" column="onlineDate" />
+		<property name="supplierId" type="java.lang.String" column="supplierId" />
+		<many-to-one name="categories" class="Categories" column="categoryId" /> 
+		<!-- 
+		多(我)對一的"一"方(對方)table "Categories"中的PK欄位名稱 ，name="categories"則表達我方"Products"的屬性
+		若多方設置cascade="save-update"署應，則程式內亦由我方來設定關聯 products.setCategories(categories)
+		如此，save products時 將連同 對(一)方categories一併save
+		<many-to-one name="categories" class="Categories" column="categoryId" cascade="save-update"/>
+		--> 		
+	</class>
+</hibernate-mapping>

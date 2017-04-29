@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="LSY.domain_hbm">
+	<class name="Categories" table="Categories">
+		<id name="categoryId" column="categoryId">
+			<generator class="assigned"/>
+		</id>
+		<property name="categoryName" type="java.lang.String" column="categoryName"/>
+
+		<set name="productList" table="Products" inverse="true" cascade="save-update">
+			<key column="categoryId" /> 
+			<one-to-many class="Products"/>
+		</set>
+	</class>	
+</hibernate-mapping> 
+		<!--Mapping說明~ 
+			key:一(我方)對多的"多"方(對方)table "Products" 的FK欄位名稱 
+			inverse(反轉):預設值為false。
+						false:表示由本方來維護關連關係
+						true:表示由對(多)方來維護關連關係，本方不維護
+			維護關連關係定義：就是設置、改變外鍵的值(如此處表products table的categoryId的值)，但不影響從categories或取products set的資料
+			從本(我)方刪除之幾種情況：
+				1.我方(Categories)項下已無關聯的Products：可直接刪除
+				2.我方項下仍有關連的Products資料 and inverse=true：會直接刪除掉我方Categories資料，單由於我方不能維護對方(Products)之FK，所以會造成後續問題 
+				3.我方項下仍有關連的Products資料 and inverse=false：會先update Produtes的CategoryId為null，再刪除掉我方Categories資料，
+				     前提仍為多方Products table的categoryId必須設為nullable(FK設 nullable一般也不合理) 
+		-->
+		<!-- 
+			cascade屬性：定義當"只(only)"執行本方的sesion.save、session.delete，而不執行對方的session.save、session.delete時，是否將多(對)方一併執行相同操作
+				1.cascade=save-update + inverse=false=> 
+							categories及所屬Products都insert進去，且Products table之 categoryId置入相應值。
+				2.cascade=save-update + inverse=true=>  
+							categories及所屬Products都insert進去，但Products table之 categoryId置入null(必需是設定nullable才行)。 
+				3.由本方cascade，程式內的關聯需以categories.getProductsList().add(products)為之才能連動寫入多筆的Prosucts
+				     若採products.setCategories(categorite)方式設定關聯，不會寫入
+		 -->
+		 <!-- 
+		 <set name="productList" table="Products" inverse="true" cascade="save-update">
+			<key column="categoryId" /> 
+			<one-to-many class="Products"/>
+		</set>
+		  -->

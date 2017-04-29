@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+ "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<!DOCTYPE validators SYSTEM "/WEB-INF/lib/xxxxx.jar/META-INF/xwork-validator-1.0.3.dtd">
+<!DOCTYPE validators SYSTEM "/WEB-INF/classes/xwork-validator-1.0.3.dtd">
+<!DOCTYPE validators PUBLIC "-//CMP//DTD dtdName 1.0//EN" "/WEB-INF/classes/xwork-validator-1.0.3.dtd">
+-->
+
+
+<!DOCTYPE validators SYSTEM "classpath:xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="customerId">
+		<field-validator type="stringlength">
+			 <param name="minLength">3</param>
+			 <param name="maxLength">8</param>
+			 <param name="trim">true</param>
+			 <message>客戶編號必須介於${minLength}~${maxLength}碼之間</message>
+		</field-validator>	
+	</field>
+	<field name="customers1.email">
+		<field-validator type="email">
+		   <message>email錯誤</message>
+		</field-validator>
+	</field>
+	<!-- 
+	<field name="customers1.totalAmount">
+		<field-validator type="required">
+		   <message>累積消費不得為空</message>
+		</field-validator>
+		<field-validator type="int">
+		   <param name="min">0</param>
+		   <param name="max">99999</param>
+		   <message>累積消費金額必須介於${min}~${max}之間</message>
+		</field-validator>
+	</field>	
+	<field name="customers1.customerId">
+		<field-validator type="required">
+		   <param name="trim">true</param>
+		   <message>客戶編戶不可為空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			 <param name="minLength">3</param>
+			 <param name="maxLength">8</param>
+			 <param name="trim">true</param>
+			 <message>客戶編號必須介於${minLength}~${maxLength}碼之間</message>
+		</field-validator>
+	</field>	
+	<field name="customers1.customerName">
+		<field-validator type="requiredstring">
+		 <param name="trim">true</param>
+		   <message>客戶姓名不可為空</message>
+		</field-validator>
+	</field>
+	<field name="customers1.birthdate">
+		<field-validator type="date">
+		   <param name="min">1910/01/01</param>
+		   <param name="max">2017/01/01</param>
+		   <message>生日必須介於${min}~${max}之間 </message>
+		</field-validator>
+	</field>
+	<field name="customers1.email">
+		<field-validator type="email">
+		   <message>email錯誤</message>
+		</field-validator>
+	</field>
+	 -->		
+</validators>

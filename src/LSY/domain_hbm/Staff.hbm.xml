@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="LSY.domain_hbm">
+	<class name="Staff" table="Staff">
+		<id name="staff_Nbr" column="staff_Nbr">
+			<generator class="assigned"/>
+		</id>
+		<property name="staff_Code" type="java.lang.String" column="staff_Code"/>
+		<property name="staff_Name" type="java.lang.String" column="staff_Name"/>
+		<property name="psn_Id" type="java.lang.String" column="psn_Id"/>
+	</class>	
+</hibernate-mapping> 
+		

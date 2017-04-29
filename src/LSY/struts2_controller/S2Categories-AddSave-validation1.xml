@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators SYSTEM "classpath:xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="categories1.categoryId">
+		<field-validator type="required">
+		   <message>類別代號不得為空</message>
+		</field-validator>		
+	</field>	
+	<field name="categories1.categoryName">
+		<field-validator type="required">
+		   <message>類別名稱不得為空</message>
+		</field-validator>		
+	</field>
+</validators>
