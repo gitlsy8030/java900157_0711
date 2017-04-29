@@ -1,16 +1,14 @@
 ### java_900157_0711
 #####<br/>因考量目前駐點工作之開發環境係以使用自定義底層元件為主，fred 為兼顧原生Java開發模式及業界通用S2SH框架之技術運用，故利用工作餘暇實作模擬專案，以期能快速上手開發。誠摯歡迎您隨以下連結進入瀏覽，藉以了解我實作內容及技術，衷心期待您的指導與建議 (email:fred733524@gmail.com)，謝謝!
 * [實作目標](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/1.%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E7%9B%AE%E6%A8%99.pdf)</font>
-* [作品之分層架構、套件(Package)說明](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/2.JavaWeb%E4%BD%9C%E5%93%81%E4%B9%8B%E5%88%86%E5%B1%A4%E6%9E%B6%E6%A7%8B%E3%80%81%E5%A5%97%E4%BB%B6(Package)%E8%AA%AA%E6%98%8E.pdf
-+ [作品畫面示例-1](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/3.JavaWeb%E4%BD%9C%E5%93%81%E7%95%AB%E9%9D%A2%E9%9D%A2%E7%A4%BA%E4%BE%8B-1.pdf)
-- [作品畫面示例-2](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/4.JavaWeb%E4%BD%9C%E5%93%81%E7%95%AB%E9%9D%A2%E9%9D%A2%E7%A4%BA%E4%BE%8B-2.pdf)
+* [作品之分層架構、套件(Package)說明](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/2.JavaWeb%E4%BD%9C%E5%93%81%E4%B9%8B%E5%88%86%E5%B1%A4%E6%9E%B6%E6%A7%8B%E3%80%81%E5%A5%97%E4%BB%B6(Package)%E8%AA%AA%E6%98%8E.pdf)</font>
+* [作品畫面示例-1](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/3.JavaWeb%E4%BD%9C%E5%93%81%E7%95%AB%E9%9D%A2%E9%9D%A2%E7%A4%BA%E4%BE%8B-1.pdf)</font>
+* [作品畫面示例-2](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/4.JavaWeb%E4%BD%9C%E5%93%81%E7%95%AB%E9%9D%A2%E9%9D%A2%E7%A4%BA%E4%BE%8B-2.pdf)
 
 ***
 #####前端 javascript & css 作品(此為2014~2015間，另一.NET專案期間由本人獨立撰寫)
-* [個人獨立開發~小型js、jQuery外掛Framework]
-(https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BC%E4%B9%8B%E5%89%8D%E7%AB%AF%E4%BD%9C%E5%93%81/CsoaMainScript_SomeHidden.js)
-* [個人獨立開發~全網站使用之css]
-(https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BC%E4%B9%8B%E5%89%8D%E7%AB%AF%E4%BD%9C%E5%93%81/CsoaMainStyle_SomeHidden.css)
+* [個人獨立開發~小型js、jQuery外掛Framework](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BC%E4%B9%8B%E5%89%8D%E7%AB%AF%E4%BD%9C%E5%93%81/CsoaMainScript_SomeHidden.js)
+* [個人獨立開發~全網站使用之css](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BC%E4%B9%8B%E5%89%8D%E7%AB%AF%E4%BD%9C%E5%93%81/CsoaMainStyle_SomeHidden.css)
 
 ***
 #####一、原生Servlet+Jsp類(UI使用bootstrap)程式碼列舉說明
@@ -82,8 +80,7 @@
 <br/>[Url連結+IoC注入+Map型態資料綁定Java程式](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/springmvc_controller/Anno_Controller1.java)
 <br/>[Jsp畫面(實現Spring Map資料綁定)](https://github.com/gitlsy8030/java900157_0711/blob/master/WebContent/jsp_spring/SpringMvcHome.jsp)
 2. Spring各種Controller及Action技術運用示範~以產品維護功能
-<br/>[實作@SpringAuthorization-自定義權限註釋,@Controller,@RequestMapping,@Autowired,@Qualifier,@RequestParam,@ResponseBody,RedirectAttribute..等]
-(https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/springmvc_controller/ProductController.java)
+<br/>[實作@SpringAuthorization-自定義權限註釋,@Controller,@RequestMapping,@Autowired,@Qualifier,@RequestParam,@ResponseBody,RedirectAttribute..等](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/springmvc_controller/ProductController.java)
 <br/>[Service介面](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/service_interface/ISpringProductService.java)
 <br/>[Service實作](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/service/SpringProductServiceReal.java)
 <br/>[Dao介面](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/dao_interface/IProductsDao.java)
