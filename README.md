@@ -123,8 +123,6 @@
 <br/>[主配置文件hibernate.cfg.xml](https://github.com/gitlsy8030/java900157_0711/blob/master/config/hibernate.cfg.xml)
 <br/>[一方(Master)產品類別Mapping xml=>Categories.hbm.xml](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/domain_hbm/Categories.hbm.xml)
 <br/>[多方(Detail)產品Mapping xml=>Products.hbm.xml](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/domain_hbm/Products.hbm.xml)
-<br/>[一個統一獲取hibernate Session的Filter，處理關連屬性資料在Jsp始延遲加載]
-(https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/web_filter/HibernateLazyloadingFilter.java)
-<br/>[Controller處理增/刪/查/改及inverse設定關連屬性維護、cascade連動新增、刪除]
-(https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/hibernate_controller/HibernateLazyHome.java)
+<br/>[一個統一獲取hibernate Session的Filter，處理關連屬性資料在Jsp始延遲加載](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/web_filter/HibernateLazyloadingFilter.java)
+<br/>[Controller處理增/刪/查/改及inverse設定關連屬性維護、cascade連動新增、刪除](https://github.com/gitlsy8030/java900157_0711/blob/master/src/LSY/hibernate_controller/HibernateLazyHome.java)
 <br/>[Jsp頁面](https://github.com/gitlsy8030/java900157_0711/blob/master/WebContent/jsp_spring/HibernateLazyHome.jsp)
