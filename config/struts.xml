@@ -1,0 +1,64 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">    
+    <struts>
+    	<!-- <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" /> -->
+    	<!-- 此constant定義代表：struts2的action將由spring來創建 -->    	
+    	<constant name="struts.objectFactory" value="spring" /> 
+		<constant name="struts.objectFactory.spring.autoWire" value="type" />
+		
+		<!-- <constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true" /> --> 
+		<!-- <bean name="namedJdbcTemplate1" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate" /> -->
+        <!-- 
+        <bean name="fun1" class="LSY.domain.FunctionInfo" />
+        <bean name="jdbcTemplate1" class="org.springframework.jdbc.core.JdbcTemplate" />
+         -->
+        <package name="s2Proj1" extends="struts-default,json-default" namespace="/"> 
+        	<!-- 在package裏配置自定義攔截器 -->
+        	<interceptors>
+        		<interceptor name="S2AutowiredInterceptor" class="LSY.aop.S2AutowiredInterceptor"></interceptor>
+        	</interceptors>     
+        	<global-results>
+        		<result name="success">/jsp_struts2/HomeAction/Global1.jsp</result>
+        	</global-results>        	
+            <action name="S2Home_*" class="S2Home" method="{1}">
+            	<result name="Home">/jsp_struts2/HomeViews/Home.jsp</result>            	
+            </action> 
+            <action name="S2Mapping1" class="LSY.struts2_controller.S2Mapping1" >
+            	<result name="S2Mapping1">/jsp_struts2/HomeViews/S2Mapping1.jsp</result>
+            </action>
+            
+            <!-- <action name="S2Mapping2" class="LSY.struts2_controller.S2Mapping2" > -->
+            <!-- 此處指定class為springmve.xml裏的bean -->
+            <action name="S2Mapping2" class="S2Mapping2" >
+            	<!-- 在action裏配置action與需使用攔截器之關聯 -->
+            	<!-- 注意：一旦action配置了自定義攔截器，則struts2裏默認的許多攔截器均不會執行了。故需要再手動將默認攔截配置近來讓它執行 -->
+            	<interceptor-ref name="S2AutowiredInterceptor"></interceptor-ref>
+            	<interceptor-ref name="defaultStack"></interceptor-ref>
+            	<result name="S2Mapping2">/jsp_struts2/HomeViews/S2Mapping2.jsp</result>
+            </action> 
+            <!-- class="S2Product"而未指定全類名，表示此action由spring創建(才可使用spring的@Autowired.....)， 因此全類名定在springmvc.xml的bean內  -->
+            <action name="S2Product_*" class="S2Product" method="{1}">
+            	<result name="Index">/jsp_struts2/ProductViews/Index.jsp</result>
+            	<result name="ProductAdd">/jsp_struts2/ProductViews/ProductAdd.jsp</result>
+            	<result name="RedirectToEdit" type="redirectAction">
+            		 <param name="actionName">S2Product_ProductEdit</param>
+			         <param name="namespace">/</param>
+			         <param name="productId">%{productId}</param>			         			         
+            	</result>
+            	<result name="ProductEdit">/jsp_struts2/ProductViews/ProductEdit.jsp</result>
+            	<result name="ProductView">/jsp_struts2/ProductViews/ProductView.jsp</result> 
+            	<!-- remove action 採用 ajax調用，返回此"ProductRemove" (定義type為"json")即可實現ajax調用 -->         	
+            	<result name="ProductRemove" type="json"/>             	             	
+            </action> 
+            <action name="S2Customers_*" class="S2Customers"  method="{1}">
+            	<result name="CustomersAdd">/jsp_struts2/CustomersViews/CustomersAdd.jsp</result> 
+            	<result name="input">/jsp_struts2/CustomersViews/CustomersAdd.jsp</result> 
+            	<result name="CustomersBatchUpdate">/jsp_struts2/CustomersViews/CustomersBatchUpdate.jsp</result> 
+            </action>
+			<action name="S2Categories_*" class="S2Categories"  method="{1}">
+            	<result name="CategoriesAdd">/jsp_struts2/CategoriesViews/CategoriesAdd.jsp</result> 
+            	<result name="input">/jsp_struts2/CategoriesViews/CategoriesAdd.jsp</result> 
+            </action>     
+        </package>
+    </struts>

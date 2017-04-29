@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 配置SpringMVC配置文件所需的xml文件解析模板 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:cxf="http://cxf.apache.org/core"
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd 
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">       
+
+    <!-- 一、 配置Handler(指定controller) -->    
+    <bean name="/SpringMvcHome.spring" class="LSY.springmvc_controller.SpringMvcHome" />
+    <bean id="httpHandler1" class="LSY.springmvc_controller.Impl_HttpRequestHandler" />
+    <bean id="controller1" name="/impl_controller1.spring" class="LSY.springmvc_controller.Impl_Controller" />
+    
+    <!-- 註解式(Annotation)的handler=>用組件掃描方式 -->
+    <context:component-scan base-package="LSY.springmvc_controller"></context:component-scan>
+    <context:component-scan base-package="LSY.hibernate_controller"></context:component-scan>
+    
+    <!-- <context:component-scan base-package="LSY.struts2_controller"></context:component-scan> -->
+    
+    <!-- 另一個掃描，給@Service用，請Spring至 LSY.service包內去掃描有定義@Autowired註釋的接口的實現類。 
+   		  例如：SpringProductService就是一個實做了ISpringProductService接口(此接口在ProductController內被宣告且註釋了@Autowired)的類 -->
+    <context:component-scan base-package="LSY.service"></context:component-scan>
+    
+    <!-- 3th 掃描，給@Service用，請Spring至 LSY.dao包內去掃描有定義@Autowired註釋的接口的實現類。 
+   		  例如：ProductDao_Oracle就是一個實做了IProductDao接口(此接口在SpringProductServiceReal內被宣告且註釋了@Autowired)的類 -->
+    <context:component-scan base-package="LSY.dao"></context:component-scan>
+    
+    <!-- 4th 掃描，請Spring至 LSY.spring_aop包內去掃描所有aop的實現類。 -->
+    <context:component-scan base-package="LSY.aop"></context:component-scan>
+    
+    <!-- 此配置才能使得AspectJ註解起作用，自動為配置有@AspectJ的類生成代理對象 -->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    
+    <!-- 二、配置url映射器-->
+    <!-- 1st 第一種 url映射器 。需有.web.servlet.handler.BeanNameUrlHandlerMapping bena(位置前後無所謂)， 
+    	   再配上一個以name="your url"、class="實作spring.Controller的控制器名稱"-->
+	    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />	    
+    <!-- 1st end--> 
+    <!-- 2nd 第二種 url映射器 。需有第一種(才知道要指向哪個控制器)，並再將第一種加上id，後再將多個url指向第一個之id名稱，就可多個url共用一個控制器 -->    
+	    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	    	<property name="mappings"> <!--注意此處的name=>"mappings"是固定不可為任意取名-->
+	    		<props>
+	    			<!-- 
+	    			<prop key="/ItemList1.spring">mappingId1</prop>
+	    			<prop key="/ItemList2.spring">mappingId1</prop>
+	    			 -->
+	    			<prop key="/impl_httpHandler1.spring">httpHandler1</prop>
+	    		</props>
+	    	</property>
+	    </bean>  
+    <!-- 2nd end -->
+    
+    <!-- 註解的映射器 -->
+    <!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />  -->
+    
+    <!-- 三、配置適配器 (Adaper)-->
+    <!--非註解的適配器 ，第1種：   org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter：要求所寫的controller需實現spring的Controller接口，
+ 	 此種所寫的controller是一個controller就只有一個方法，類似之前servlet的doPost、doGet-->   
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+    
+    <!--非註解的適配器，第1種：  org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter：要求所寫的controller需實現spring的HttpRequestHandler接口-->   
+    <bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter" />
+    
+    <!-- 註解的適配器 -->
+    <!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdaper" /> -->
+    
+        
+    <!-- 四、view解析器 -->    
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<property name="prefix" value="/jsp_spring/"></property>
+    	<property name="suffix" value=".jsp"></property>
+    </bean> 
+    
+    <!-- 五、使用mvc:annotation-driven代替註解的映射器和適配器 配置這個後，上述兩個就無須配置，且他又預設加載了很多參數綁定方發，如json轉換。實際開發以使用這個配置為主-->   
+    <mvc:annotation-driven conversion-service="conversionService"
+    	validator="springValidator1">
+   	</mvc:annotation-driven>
+     
+    <!-- 六、 配置一個字定義的dateformat給spring使用於moder binding時前端的string可被轉成Date型別 
+    	 此處的id="conversionService"==> 要對應到<mvc:annotation-driven 的conversion-service="conversionService"屬性    --> 
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+	    <property name="formatters">
+	        <set>
+	            <bean class="LSY.springmvc_controller.SpringDateFormatter">
+	                <constructor-arg name="datePattern" value="yyyy/MM/dd"/>
+	            </bean>
+	            <bean class="LSY.springmvc_controller.SpringDoubleFormatter">                
+	            </bean>
+	        </set>
+	    </property>
+	</bean> 
+	
+	<!-- 七、為spring配置數據原(此處採用的事org.apache.commons.dbcp.BasicDataSource)，此法會使用connection pool，
+		而DriverManager不會使用connection pool -->  
+	<bean id="oracleDataSource1" class="org.apache.commons.dbcp.BasicDataSource">
+		<qualifier value="myDataSource1"/>
+        <property name="driverClassName"> 
+               <value>oracle.jdbc.driver.OracleDriver</value> 
+        </property> 
+        <property name="url">
+               <value>jdbc:oracle:thin:@localhost:1521:xe</value> 
+        </property> 
+        <property name="username"> 
+               <value>C03</value> 
+        </property> 
+        <property name="password"> 
+               <value>C03</value> 
+        </property> 
+        <property name="maxActive"> 
+               <value>5</value> 
+        </property> 
+        <property name="maxIdle"> 
+               <value>2</value> 
+        </property> 
+        <property name="maxWait"> 
+               <value>30000</value> 
+        </property> 
+     </bean>
+     
+     <!-- 配置jdbcTemplate 並指定期dataSource屬性參考字前面定義的"oracleDataSource1"，如此就可直接注入JdbcTemplate-->
+     <bean id="oracleJdbcTemplate1" class="org.springframework.jdbc.core.JdbcTemplate">  
+        <property name = "dataSource" ref="oracleDataSource1" />  
+	 </bean> 
+	 
+	 <!-- 配置 NamedParameterJdbcTemplate, 此類沒有無參構造器,所以必须在construetor指定dataSource參數 -->
+	 <bean id="oracleNamedParameterJdbcTemplate1"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="oracleDataSource1"></constructor-arg>	
+	 </bean>
+     
+     <!-- 八、為spring配置事務管理器，注意：須在最前面引入命名空間  xmlns:tx....  -->  
+     <bean id="TxManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">     
+		<property name="dataSource" ref="oracleDataSource1" />     
+	 </bean>
+	 <!-- 啟用事物管理的annotation -->
+	 <tx:annotation-driven transaction-manager="TxManager"/>
+	 
+	 <!-- 九、配置Spring Validator=>這個spring的校驗器的類的提供者為hibernate -->	
+	 <bean id="springValidator1" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+        <!--不设置则默认为classpath下的 ValidationMessages.properties -->
+        <property name="validationMessageSource" ref="messageSource1" />
+     </bean>
+     <bean id="messageSource1" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"> 
+     	<!-- 屬性basename=> "springValidationMessages" 表示錯誤訊息在哪個.properties檔內--> 
+        <property name="basename" value="classpath:springValidationMessages" />  
+        <property name="fileEncodings" value="utf-8" />  
+        <property name="cacheSeconds" value="300" />  
+     </bean> 
+     <!-- 設置一個struts2的action bean 給sparing 管理 -->
+     <!--  <bean id="MyLoginInfoService1" class="LSY.service.LoginInfoService" /> -->
+     <!--  <property name="loginInfoService1" ref="MyLoginInfoService1"></property> -->
+      
+   	 <bean id="S2Mapping2" scope="prototype" class="LSY.struts2_controller.S2Mapping2"> 
+	 	 <property name="prop1" value="this value injected by Spring"></property>
+	 	 <property name="auth_SpringHome1" ref="auth_SpringHome" />
+	 	 <property name="decline_SpringHome1" ref="decline_SpringHome" />
+	 	 <property name="auth_Products1" ref="auth_Products" />
+	 	 <property name="decline_Products1" ref="decline_Products" />	 	 
+     </bean>
+     <bean id="S2Home" scope="prototype" class="LSY.struts2_controller.S2Home" >  
+    
+	 	 <property name="auth_SpringHome1" ref="auth_SpringHome" />	 	 
+	 	 <property name="auth_Products1" ref="auth_Products" />
+	 	 <property name="auth_Categories1" ref="auth_Categories" />	
+	 	 <property name="auth_CategoriesAdd1" ref="auth_CategoriesAdd" />	
+	 	 <property name="auth_CategoriesList1" ref="auth_CategoriesList" />	
+	 	 <property name="auth_Customers1" ref="auth_Customers" />	
+	 	 <property name="auth_CustomersBatch1" ref="auth_CustomersBatch" />	
+	 	 <property name="auth_SuppliersAdd1" ref="auth_SuppliersAdd" />	
+	
+	 	 <property name="decline_SpringHome1" ref="decline_SpringHome" />	 	 
+	 	 <property name="decline_Products1" ref="decline_Products" />
+	 	 <property name="decline_Categories1" ref="decline_Categories" />	
+	 	 <property name="decline_CategoriesAdd1" ref="decline_CategoriesAdd" />	
+	 	 <property name="decline_CategoriesList1" ref="decline_CategoriesList" />	
+	 	 <property name="decline_Customers1" ref="decline_Customers" />	
+	 	 <property name="decline_CustomersBatch1" ref="decline_CustomersBatch" />	
+	 	 <property name="decline_SuppliersAdd1" ref="decline_SuppliersAdd" />	
+	 
+     </bean> 
+     
+     <bean id="S2Product" scope="prototype" class="LSY.struts2_controller.S2Product" />
+     <bean id="S2Customers" scope="prototype" class="LSY.struts2_controller.S2Customers" />
+     <bean id="S2Categories" scope="prototype" class="LSY.struts2_controller.S2Categories" />  	 	  	 	  	 
+     
+     <!--  
+     <bean id="S2Mapping" class="LSY.struts2_controller.S2Mapping2" />    
+	 -->
+	 
+    <!-- 配置簡單LSY.domains內的權限已變測試基本IoC注入，並以此模擬使用者權限，來模擬進行aop權限管理 -->
+    <bean id="auth_SpringHome" name="auth_SpringHome" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2001" />
+    	<property name="functionUrl" value="/LSYMain/SpringMvcHome.spring" />
+    	<property name="text" value="F2001~Mvc各種Url映射+IoC權限注入+Aop" />
+    	<property name="isAuth" value="on" />
+    </bean>
+    <bean id="decline_SpringHome" name="decline_SpringHome" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2001" />
+    	<property name="functionUrl" value="/LSYMain/SpringMvcHome.spring" />
+    	<property name="text" value="F2001~Mvc各種Url映射+IoC權限注入+Aop" />
+    	<property name="isAuth" value="off" />
+    </bean>    
+    
+    <bean id="auth_Products" name="auth_Products" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2002" />
+    	<property name="functionUrl" value="/LSYMain/Product_Index.spring" />
+    	<property name="text" value="F2002~產品維護(Mvc+Aop+Easyui綜合)" />
+    	<property name="isAuth" value="yes" />
+    	<property name="isAdd" value="yes" />
+    	<property name="isDelete" value="yes" />
+    	<property name="isUpdate" value="yes" />
+    	<property name="isView" value="yes" />
+    </bean>
+    <bean id="decline_Products" name="decline_Products" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2002" />
+    	<property name="functionUrl" value="/LSYMain/Product_Index.spring" />
+    	<property name="text" value="F2002~產品維護(Mvc+Aop+Easyui綜合)" />
+    	<property name="isAuth" value="yes" />
+    	<property name="isAdd" value="no" />
+    	<property name="isDelete" value="no" />
+    	<property name="isUpdate" value="no" />
+    	<property name="isView" value="no" />
+    </bean>   
+    
+    <bean id="auth_Categories" name="auth_Categories" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2003" />
+    	<property name="functionUrl" value="/LSYMain/Categories_List.spring" />
+    	<property name="text" value="F2003~商品類別多筆查詢(JdbcTemplate)" />
+    	<property name="isAuth" value="1" />    	
+    </bean>
+    <bean id="decline_Categories" name="decline_Categories" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2003" />
+    	<property name="functionUrl" value="/LSYMain/Categories_List.spring" />
+    	<property name="text" value="F2003~商品類別多筆查詢(JdbcTemplate)" />
+    	<property name="isAuth" value="0" />
+    </bean>
+    <bean id="auth_CategoriesAdd" name="auth_CategoriesAdd" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2004" />
+    	<property name="functionUrl" value="/LSYMain/Categories_Add.spring" />
+    	<property name="text" value="F2004~商品類別新增(Form標籤+JdbcTemplate)" />
+    	<property name="isAuth" value="on" />
+    </bean>
+    <bean id="decline_CategoriesAdd" name="decline_CategoriesAdd" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2004" />
+    	<property name="functionUrl" value="/LSYMain/Categories_Add.spring" />
+    	<property name="text" value="F2004~商品類別新增(Form標籤+JdbcTemplate)" />
+    	<property name="isAuth" value="off" />
+    </bean>
+    <bean id="auth_CategoriesList" name="auth_CategoriesList" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2005" />
+    	<property name="functionUrl" value="/LSYMain/Categories_List.spring" />
+    	<property name="text" value="F2005~商品類別修改(Form標籤+JdbcTemplate)" />
+    	<property name="isAuth" value="1" />
+    </bean>
+    <bean id="decline_CategoriesList" name="decline_CategoriesList" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2005" />
+    	<property name="functionUrl" value="/LSYMain/Categories_List.spring" />
+    	<property name="text" value="F2005~商品類別修改(Form標籤+JdbcTemplate)" />
+    	<property name="isAuth" value="0" />
+    </bean>
+    <bean id="auth_Customers" name="auth_Customers" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2006" />
+    	<property name="functionUrl" value="/LSYMain/Customers_Add.spring" />
+    	<property name="text" value="F2006~客戶新增(Form標籤+NamedJdbc)" />
+    	<property name="isAuth" value="yes" />
+    </bean>
+    <bean id="decline_Customers" name="decline_Customers" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2006" />
+    	<property name="functionUrl" value="/LSYMain/Customers_Add.spring" />
+    	<property name="text" value="F2006~客戶新增(Form標籤+NamedJdbc)" />
+    	<property name="isAuth" value="no" />
+    </bean>
+    <bean id="auth_CustomersBatch" name="auth_CustomersBatch" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2007" />
+    	<property name="functionUrl" value="/LSYMain/CustomersAndSuppliers_BatchQuery.spring" />
+    	<property name="text" value="F2007~JDBC批次修改(集合綁定+事務管理)" />
+    	<property name="isAuth" value="yes" />
+    </bean>
+    <bean id="decline_CustomersBatch" name="decline_CustomersBatch" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2007" />
+    	<property name="functionUrl" value="/LSYMain/CustomersAndSuppliers_BatchQuery.spring" />
+    	<property name="text" value="F2007~JDBC批次修改(集合綁定+事務管理)" />
+    	<property name="isAuth" value="no" />
+    </bean>
+    <bean id="auth_SuppliersAdd" name="auth_SuppliersAdd" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2008" />
+    	<property name="functionUrl" value="/LSYMain/Suppliers_Add.spring" />
+    	<property name="text" value="F2008~供應商新增(Spring Validation)" />
+    	<property name="isAuth" value="yes" />
+    </bean>
+    <bean id="decline_SuppliersAdd" name="decline_SuppliersAdd" class="LSY.domain.UserAuthentication">
+    	<property name="functionId" value="F2008" />
+    	<property name="functionUrl" value="/LSYMain/Suppliers_Add.spring" />
+    	<property name="text" value="F2008~供應商新增(Spring Validation)" />
+    	<property name="isAuth" value="no" />
+    </bean>	
+</beans>
+<!-- springmvc.xml in folder "config"-->
