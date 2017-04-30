@@ -6,7 +6,7 @@
 * [作品畫面示例-2](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%8E%9F%E7%94%9FJavaWeb%E5%8F%8A%E9%80%9A%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AF%A6%E4%BD%9C%E8%AA%AA%E6%98%8E/4.JavaWeb%E4%BD%9C%E5%93%81%E7%95%AB%E9%9D%A2%E9%9D%A2%E7%A4%BA%E4%BE%8B-2.pdf)
 
 ***
-#####前端 javascript & css 作品(此為2014年，另一.NET專案期間由本人獨立撰寫)
+#####前端 javascript & css 作品(此為2014年另一.NET專案期間由本人獨立撰寫)
 * [個人獨立開發~小型js、jQuery外掛Framework](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BC%E4%B9%8B%E5%89%8D%E7%AB%AF%E4%BD%9C%E5%93%81/CsoaMainScript_SomeHidden.js)
 * [個人獨立開發~全網站使用之css](https://github.com/gitlsy8030/java900157_0711/blob/master/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BC%E4%B9%8B%E5%89%8D%E7%AB%AF%E4%BD%9C%E5%93%81/CsoaMainStyle_SomeHidden.css)
 
